@@ -14,14 +14,14 @@ const Works: React.FC<props> = () => {
           <Work img="images/idf.png" alt="Israel Defense Forces" imgHref="https://www.idf.il/en/" title="Israel Defense Forces" titleHref="https://www.idf.il/en/" role="Lead Developer">
             <p>
               In the <strong>IDF</strong>, I served as a developer, and later on founded <strong>Unit 88</strong>.
-              I was working on several softwares and applications used by over 2,000 soldiers to this day.
+              I was working on several software and applications used by over 2,000 soldiers to this day.
             </p>
           </Work>
 
           <Work img="images/hypixel.png" alt="Hypixel" imgHref="https://hypixel.net/members/lielamar.175428/" title="Hypixel Network" titleHref="https://hypixel.net/" role="Staff Member">
             <p>
               <strong>Hypixel</strong> is the largest Minecraft Network with over 20 million players, there I have been volunteering for 2 years, from 2019 to 2021.
-              I mainly focus on player assistance, but I also train new staff members, find bugs, and test new feautes and updates.
+              I mainly focused on player assistance, but I also trained new staff members, reported bugs, and tested new feautes and updates.
             </p>
           </Work>
 
