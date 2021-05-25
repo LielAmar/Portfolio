@@ -1,0 +1,21 @@
+.credits {
+  width: 100%;
+
+  margin: 2rem auto;
+
+  display: flex;
+  flex-direction: row;
+  
+  justify-content: space-between;
+}
+
+.credits p {
+  color: var(--footer-credits-text);
+
+  font-family: var(--ff-accent);
+  font-size: 1rem;
+}
+
+.credits p span a {
+  text-decoration: underline;
+}

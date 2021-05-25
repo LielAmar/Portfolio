@@ -1,0 +1,14 @@
+.contact {
+  width: 100%;
+
+  margin: 2rem 0;
+
+  color: var(--text);
+
+  text-align: center;
+}
+
+.contact h2 {
+  font-weight: 500;
+  font-size: 2rem;
+}
