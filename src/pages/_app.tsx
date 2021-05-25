@@ -8,7 +8,7 @@ const App = ({ Component, pageProps }: any) => {
   // Loading google analytics
   useEffect(() => {
     ReactGA.initialize("UA-197860180-2", {
-      debug: true,
+      debug: false,
       titleCase: false,
       gaOptions: {
         name: "PortfolioTracker"
