@@ -11,7 +11,7 @@ const App = ({ Component, pageProps }: any) => {
       debug: true,
       titleCase: false,
       gaOptions: {
-        name: "Portfolio Tracker"
+        name: "PortfolioTracker"
       }
     });
   }, []);
