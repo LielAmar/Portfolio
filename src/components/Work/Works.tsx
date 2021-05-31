@@ -1,5 +1,6 @@
-import styles from "./Works.module.css";
 import Work from "./Work/Work";
+
+import styles from "./Works.module.css";
 
 type props = {}
 
@@ -29,7 +30,7 @@ const Works: React.FC<props> = () => {
             <p>
               <strong>Minestore</strong> is a Buycraft (Tebex) alternative with a primary goal of authenticating purchases In-Game.
               It is written in Java and NodeJS, using Sockets, Databases and more cool stuff!
-              Source-Code is available on <a href="https://github.com/LielAmar/Minestore" target="_blank" >GitHub</a>.
+              Source-Code is available on <a href="https://github.com/LielAmar/Minestore" target="_blank" rel="noopener noreferrer" >GitHub</a>.
             </p>
           </Work>
 
@@ -38,7 +39,7 @@ const Works: React.FC<props> = () => {
             <p>
               <strong>Liel's Utils</strong> is a set of libraries for Spigot.
               The libraries include but not limited to Packets, Custom Entities, Scoreboards, Bossbars, Validation, Databases, Maps, GUIs and Commands.
-              Source-Code is available on <a href="https://github.com/LielAmar/LielsUtils" target="_blank" >GitHub</a>.
+              Source-Code is available on <a href="https://github.com/LielAmar/LielsUtils" target="_blank" rel="noopener noreferrer" >GitHub</a>.
             </p>
           </Work>
 
@@ -46,7 +47,7 @@ const Works: React.FC<props> = () => {
             <p>
               <strong>Party Games</strong> is a Spigot plugin, a fork of <a href="https://hypixel.net/forums/arcade-games.80/">Hypixel's Party Games</a> plugin.
               It contains 26 different Minigames and tens of features, while being highly customizable.
-              Source-Code is available on <a href="https://github.com/LielAmar/Party-Games" target="_blank" >GitHub</a>.
+              Source-Code is available on <a href="https://github.com/LielAmar/Party-Games" target="_blank" rel="noopener noreferrer" >GitHub</a>.
             </p>
           </Work>
 
@@ -54,7 +55,7 @@ const Works: React.FC<props> = () => {
             <p>
               <strong>Two Factor Authentication</strong> is an Authentication Spigot plugin.
               It allows players to use Authentication Apps such as Google Authenticator, using the TOTP algorithm.
-              Source-Code is available on <a href="https://github.com/LielAmar/2FA" target="_blank" >GitHub</a>.
+              Source-Code is available on <a href="https://github.com/LielAmar/2FA" target="_blank" rel="noopener noreferrer" >GitHub</a>.
             </p>
           </Work>
 
@@ -62,7 +63,7 @@ const Works: React.FC<props> = () => {
           <Work img="images/languagefix.png" alt="Language Fix Plugin" imgHref="https://github.com/LielAmar/LanguageFix" title="Language Fix" titleHref="https://bit.ly/3hMGZ3I" role="Developer">
             <p>
               <strong>LanguageFix</strong> is a fork of <strong>HebrewFix</strong>. It was developed to give a better solution for Right-To-Left issues in Minecraft, supporting every RTL language with a better algorithm.
-              Source-Code is available on <a href="https://github.com/LielAmar/LanguageFix" target="_blank" >GitHub</a>.
+              Source-Code is available on <a href="https://github.com/LielAmar/LanguageFix" target="_blank" rel="noopener noreferrer" >GitHub</a>.
             </p>
           </Work>
 
@@ -76,7 +77,7 @@ const Works: React.FC<props> = () => {
             <p>
               <strong>Liel's Core</strong> is a Spigot plugin created to handle, enable and disable certain aspects of Minecraft.
               It has more than 50 essentials features including Commands and Properties.
-              Source-Code is available on <a href="https://github.com/LielAmar/LielsCore" target="_blank" >GitHub</a>.
+              Source-Code is available on <a href="https://github.com/LielAmar/LielsCore" target="_blank" rel="noopener noreferrer" >GitHub</a>.
             </p>
           </Work>
 
@@ -99,7 +100,7 @@ const Works: React.FC<props> = () => {
             <p>
               <strong>Play-IL Network</strong> was a Minecraft Network.
               It offered over 10 different Minigames and attracted thousands of players.
-              The official youtube channel, containing several videos about the Network, can be found <a href="https://www.youtube.com/channel/UCNnnS7U1ZN0SlSCeMhgDMpw" target="_blank" >here</a>.
+              The official youtube channel, containing several videos about the Network, can be found <a href="https://www.youtube.com/channel/UCNnnS7U1ZN0SlSCeMhgDMpw" target="_blank" rel="noopener noreferrer" >here</a>.
             </p>
           </Work>
 
@@ -107,8 +108,8 @@ const Works: React.FC<props> = () => {
           <Work img="images/hebrewfix.png" alt="Hebrew Fix" imgHref="https://bitbucket.org/hebrewfix/hebrewfix-plugin/src" title="Hebrew Fix" titleHref="https://dev.bukkit.org/projects/languagefix" role="Proxy Developer">
             <p>
               <strong>HebrewFix</strong> is the largest Israeli Bukkit plugin, developed to fix Right-To-Left issues in Minecraft.
-              Source-Code is available on <a href="https://bitbucket.org/hebrewfix/hebrewfix-plugin/src/develop/" target="_blank">BitBucket</a>
-              for the Bukkit version and on <a href="https://github.com/LielAmar/HebrewFixBungeecord" target="_blank">GitHub</a> for the BungeeCord version.
+              Source-Code is available on <a href="https://bitbucket.org/hebrewfix/hebrewfix-plugin/src/develop/" target="_blank" rel="noopener noreferrer" >BitBucket</a>
+              for the Bukkit version and on <a href="https://github.com/LielAmar/HebrewFixBungeecord" target="_blank" rel="noopener noreferrer" >GitHub</a> for the BungeeCord version.
             </p>
           </Work>
 
@@ -120,8 +121,8 @@ const Works: React.FC<props> = () => {
 
           <Work img="images/lielsbot.png" alt="Liel's Discord Bot" imgHref="https://github.com/LielAmar/LielsBot" title="Liel's Discord Bot" titleHref="https://discord.com/invite/NzgBrqR" role="Developer">
             <p>
-              <strong>Liel's Bot</strong> is a discord bot used in <a href="https://discord.com/invite/NzgBrqR" target="_blank">LielAmar's Discord Server</a>.
-              It is being developed with Python and is capable of Self-Moderation, Hypixel Linking using its <a href="https://api.hypixel.net/" target="_blank">Public API</a>,
+              <strong>Liel's Bot</strong> is a discord bot used in <a href="https://discord.com/invite/NzgBrqR" target="_blank" rel="noopener noreferrer" >LielAmar's Discord Server</a>.
+              It is being developed with Python and is capable of Self-Moderation, Hypixel Linking using its <a href="https://api.hypixel.net/" target="_blank" rel="noopener noreferrer" >Public API</a>,
               Logging Actions, Contacting Staff and much more.
             </p>
           </Work>

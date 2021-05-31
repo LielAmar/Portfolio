@@ -12,6 +12,9 @@
 
 
 .socialItem svg {
+  max-width: 30px;
+  max-height: 30px;
+
   transition: color .25s, transform .25s;
 }
 

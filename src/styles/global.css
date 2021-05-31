@@ -7,6 +7,8 @@
   --text: #ffffff;
   --text-secondary: #bababa;
 
+  --body-background: #333333;
+
   --background-primary: #212121;
   --background-secondary: #303030;
   --background-accent: #515151;
@@ -53,10 +55,12 @@ html {
 }
 
 body {
-  height: 100%;
+  height: max-content;
   min-height: 100%;
 
   font-family: var(--ff-primary);
+
+  background-color: var(--body-background);
 }
 
 #__next {

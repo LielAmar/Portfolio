@@ -13,12 +13,12 @@ type props = {
 const Work: React.FC<props> = ({ img, alt, imgHref, title, titleHref, role, children }) => {
   return (
     <div className={ styles.work }>
-      <a href={ imgHref } target="_blank" >
+      <a href={ imgHref } target="_blank" rel="noopener noreferrer" >
         <img src={ img } alt={ alt } />
       </a>
       
 
-      <a href={ titleHref } target="_blank" ><h2>{ title }</h2></a>
+      <a href={ titleHref } target="_blank" rel="noopener noreferrer" ><h2>{ title }</h2></a>
       <h3>{ role }</h3>
 
       { children }

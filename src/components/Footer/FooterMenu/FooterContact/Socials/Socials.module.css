@@ -1,3 +1,15 @@
 .socials {
+  width: 100%;
+
   margin-top: 1.25rem;
+}
+
+@media (max-width: 500px) {
+  .socials {
+    width: 75%;
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 1rem 0;
+  }
 }

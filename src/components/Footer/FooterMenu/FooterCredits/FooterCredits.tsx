@@ -7,7 +7,7 @@ const FooterCredits: React.FC<props> = () => {
     <div className={ styles.credits }>
 
       <p>© 2020 Liel Amar. All Rights Reserved</p>
-      <p>Icons from <span><a href="https://www.flaticon.com/" target="_blank">Flaticon</a></span></p>
+      <p>Icons from <span><a href="https://www.flaticon.com/" target="_blank" rel="noopener noreferrer">Flaticon</a></span></p>
 
     </div>
   );

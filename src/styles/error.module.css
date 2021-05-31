@@ -1,0 +1,51 @@
+.error {
+  height: 100vh;
+  width: 100%;
+  
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.error .information {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.error .information > * {
+  color: var(--text);
+}
+
+.error .information h4 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.error .information p {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.error .information > *:first-child {
+  padding-right: 1rem;
+
+  border-right: 1px solid var(--text);
+}
+
+.error .information > *:last-child {
+  padding-left: 1rem;
+}
+
+.error .redirect {
+  margin-top: 2rem;
+
+  color: var(--text);
+
+  font-size: 1rem;
+  font-weight: 300;
+}

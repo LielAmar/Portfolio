@@ -18,7 +18,7 @@ const SocialItem: React.FC<props> = ({ icon, title, href, primary }) => {
   const toggleHover = () => setHover(!hover);
 
   return (
-    <a href={ href } className={ styles.socialItem } target="_blank" title={ title } >
+    <a href={ href } className={ styles.socialItem } target="_blank" rel="noopener noreferrer" title={ title } >
 
       { hover ? 
         <FontAwesomeIcon icon={ icon } style={{ color: primary }} onMouseEnter={ toggleHover } onMouseLeave={ toggleHover } size="2x"></FontAwesomeIcon>
