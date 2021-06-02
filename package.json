@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "author": "Liel Amar",
   "license": "Copyright (C) LielAmar, All Rights Reserved\nUnauthorized copying of this file, via any medium is strictly prohibited\nProprietary and confidential\nWritten by Liel Amar <liel@lielamar.com>, May 2021",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -16,15 +16,10 @@
     "next-js"
   ],
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.35",
-    "@fortawesome/free-brands-svg-icons": "^5.15.3",
-    "@fortawesome/free-solid-svg-icons": "^5.15.3",
-    "@fortawesome/react-fontawesome": "^0.1.14",
-    "@types/gtag.js": "0.0.4",
     "next": "10.2.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-ga": "^3.3.0",
+    "react-svg": "^13.0.6",
     "react-typed": "^1.2.0"
   },
   "devDependencies": {

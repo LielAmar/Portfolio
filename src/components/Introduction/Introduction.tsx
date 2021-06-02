@@ -19,7 +19,7 @@ const Introduction: React.FC<props> = () => {
     <section id="me" className={ styles.intro }>
       <div className={ styles.introWrapper }>
         <div className={ styles.logoWrapper }>
-          <img id="logo" alt="Grayish-LA-Logo" src="/images/logo.png"/>
+          <img id="logo" alt="Grayish-LA-Logo" src="/images/logo.webp"/>
         </div>
 
         <div className={ styles.textWrapper }>

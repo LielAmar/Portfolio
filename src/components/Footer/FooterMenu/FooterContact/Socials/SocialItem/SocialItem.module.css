@@ -10,14 +10,19 @@
   margin-right: 0 !important;
 }
 
+.socialItem span svg:hover {
+  fill: inherit;
+}
 
-.socialItem svg {
+.socialItem span svg {
   max-width: 30px;
   max-height: 30px;
 
-  transition: color .25s, transform .25s;
+  fill: var(--text);
+
+  transition: fill .25s, transform .25s;
 }
 
-.socialItem svg:hover {
+.socialItem span svg:hover {
   transform: translateY(-5px);
 }

@@ -1,23 +1,6 @@
-import ReactGA from "react-ga";
-
-import { useEffect } from 'react';
-
 import "../styles/global.css";
 
 const App = ({ Component, pageProps }: any) => {
-  // Loading google analytics
-  useEffect(() => {
-    ReactGA.initialize("UA-197860180-2", {
-      debug: false,
-      titleCase: false,
-      gaOptions: {
-        name: "PortfolioTracker"
-      }
-    });
-
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }, []);
-
   return <Component {...pageProps} />
 }
 

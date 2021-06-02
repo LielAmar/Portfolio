@@ -1,23 +1,25 @@
-import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { ReactSVG } from "react-svg";
 
 import styles from "./Skill.module.css";
 
 type props = {
-  icon: IconDefinition
-  iconColor: string
-  title: String
+  src: string
+  title: string
+  primaryColor: string
   children: any
 }
 
-const Skill: React.FC<props> = ({ icon, iconColor, title, children }) => (
-  <div className={ styles.skill }>
-    <FontAwesomeIcon icon={ icon } style={ { color: iconColor } } size="4x"/>
+const Skill: React.FC<props> = ({ src, title, primaryColor, children }) => {
+  
+  return (
+    <div className={ styles.skill }>
+      <ReactSVG src={ src } wrapper="span" style={ { fill: primaryColor } } />
 
-    <h3>{ title }</h3>
+      <h3>{ title }</h3>
 
-    { children }
-  </div>
-)
+      { children }
+    </div>
+  )
+}
 
 export default Skill
