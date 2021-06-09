@@ -92,7 +92,7 @@ const Works: React.FC<props> = () => {
           <Work img="images/play-il.webp" alt="Play-IL" imgHref="https://forum.play-il.co.il/member/8558-lielamar" title="Play-IL" titleHref="https://forum.play-il.co.il/" role="Management Team">
             <p>
               <strong>Play-IL</strong> is the biggest gaming community in Israel.
-              I was taking a part of the Management Team from 2017 to 2020 and my main role was to help with development, server management and staff management.
+              I was taking a part of the Management Team since 2017 and my role varies between helping with development, server management and staff management.
             </p>
           </Work>
 
