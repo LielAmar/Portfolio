@@ -20,10 +20,9 @@
   margin: 0 2rem 0 0;
 }
 
-.introWrapper .logoWrapper img {
+.introWrapper .logoWrapper > * {
   max-width: 15rem;
 
-  /* background: var(--intro-logo-background); */
   box-shadow: var(--intro-logo-shadow);
 
   border-radius: 100%;

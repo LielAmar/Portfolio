@@ -17,8 +17,9 @@ const FooterEmbeds: React.FC<props> = () => {
   return (
     <div className={ styles.embeds }>
     
-      <iframe className={ styles.discord } src="https://discordapp.com/widget?id=416652224505184276&theme=dark" width="300" height="450" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-			<div className={ styles.twitter }>
+      <iframe loading={ "lazy" } className={ styles.discord } src="https://discordapp.com/widget?id=416652224505184276&theme=dark" width="300" height="450" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+			
+      <div className={ styles.twitter }>
         <a data-theme="dark" data-chrome="transparent" className="twitter-timeline" href="https://twitter.com/IamLielAmar?ref_src=twsrc%5Etfw">Tweets by IamLielAmar</a>
       </div>
     </div>

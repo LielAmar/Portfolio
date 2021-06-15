@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import styles from "./Work.module.css";
 
 type props = {
@@ -14,9 +16,8 @@ const Work: React.FC<props> = ({ img, alt, imgHref, title, titleHref, role, chil
   return (
     <div className={ styles.work }>
       <a href={ imgHref } target="_blank" rel="noopener noreferrer" >
-        <img src={ img } alt={ alt } />
+        <Image src={ img } alt={ alt } width={ 250 } height={ 250 } />
       </a>
-      
 
       <a href={ titleHref } target="_blank" rel="noopener noreferrer" ><h2>{ title }</h2></a>
       <h3>{ role }</h3>

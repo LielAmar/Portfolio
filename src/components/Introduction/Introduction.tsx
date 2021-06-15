@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import Typed from "react-typed";
 
 import styles from "./Introduction.module.css";
@@ -19,7 +21,7 @@ const Introduction: React.FC<props> = () => {
     <section id="me" className={ styles.intro }>
       <div className={ styles.introWrapper }>
         <div className={ styles.logoWrapper }>
-          <img id="logo" alt="Grayish-LA-Logo" src="/images/logo.webp"/>
+          <Image id="logo" alt="Grayish-LA-Logo" src="/images/logo.webp" width={ 300 } height={ 300 }/>
         </div>
 
         <div className={ styles.textWrapper }>
