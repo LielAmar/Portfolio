@@ -6,6 +6,7 @@ import Skills from "../components/Skills/Skills";
 import Works from "../components/Work/Works";
 import Navbar from "@components/Navbar/Navbar";
 import Footer from "@components/Footer/Footer";
+import FooterMenu from "@components/Footer/FooterMenu/FooterMenu";
 
 import { __project__ } from "../config/global";
 
@@ -26,7 +27,7 @@ const IndexPage = () => {
         <meta name="twitter:creator" content="@iamlielamar" />
       </Head>
       
-      <Layout title={ `Home - ${__project__}` } description={ `Liel Amar's Portfolio Website - Home page` }>
+      <Layout title={ `${__project__} - Portfolio` } description={ `Liel Amar's Portfolio Website - Home page` }>
         <Navbar />
 
         <Introduction />
@@ -35,7 +36,8 @@ const IndexPage = () => {
 
         <Works />
 
-        <Footer />
+        <Footer><FooterMenu includeEmbeds={ false }/></Footer>
+
       </Layout>
     </>
   );

@@ -5,9 +5,11 @@ import FooterCredits from "./FooterCredits/FooterCredits";
 
 import styles from "./FooterMenu.module.css";
 
-interface props {}
+interface props {
+  includeEmbeds: boolean
+}
 
-const FooterMenu: React.FC<props> = () => {
+const FooterMenu: React.FC<props> = ({ includeEmbeds = true }) => {
   return (
     <div className={ styles.footerContainer }>
       
@@ -15,7 +17,7 @@ const FooterMenu: React.FC<props> = () => {
 
       <Seperator />
 
-      <FooterEmbeds />
+      { includeEmbeds && <FooterEmbeds /> }
 
       <Seperator />
 
