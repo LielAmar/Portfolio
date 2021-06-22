@@ -7,7 +7,7 @@
 
 html[data-theme='light'] {
   --text: #000000;
-  --text-secondary: #383838;
+  --text-secondary: #1d1d1d;
 
   --body-background: #d6d6d6;
 
@@ -32,16 +32,17 @@ html[data-theme='light'] {
 
   --intro-logo-background: #ffffff;
   --intro-logo-shadow: 0px 5px 15px 0px rgb(0 0 0 / 50%);
+  --logo-opposite-color: #212121;
 
-  --skill-card: #d6d6d6;
+  --skill-card: #eeeeee;
   --skill-icon: #3B3B3B;
 
-  --work-card: #d6d6d6;
+  --work-card: #eeeeee;
 
   --footer-background: #d6d6d6;
   --footer-shadow: #272727;
-  --footer-embeds-background: #666;
-  --footer-icon: #272727;
+  --footer-embeds-background: #fff;
+  --footer-icon: #5f5f5f;
   --footer-credits-text: #666;
 }
 
@@ -69,6 +70,7 @@ html[data-theme='dark'] {
 
   --navbar-background: #333333;
   --navbar-shadow: #000000;
+  --logo-opposite-color: #ffffff;
 
   --intro-logo-background: #ffffff;
   --intro-logo-shadow: 0px 5px 15px 0px rgb(0 0 0 / 50%);

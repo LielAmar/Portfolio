@@ -108,8 +108,7 @@ const Works: React.FC<props> = () => {
           <Work img="/images/hebrewfix.webp" alt="Hebrew Fix" imgHref="https://bitbucket.org/hebrewfix/hebrewfix-plugin/src" title="Hebrew Fix" titleHref="https://dev.bukkit.org/projects/languagefix" role="Proxy Developer">
             <p>
               <strong>HebrewFix</strong> is the largest Israeli Bukkit plugin, developed to fix Right-To-Left issues in Minecraft.
-              Source-Code is available on <a href="https://bitbucket.org/hebrewfix/hebrewfix-plugin/src/develop/" target="_blank" rel="noopener noreferrer" >BitBucket</a>
-              for the Bukkit version and on <a href="https://github.com/LielAmar/HebrewFixBungeecord" target="_blank" rel="noopener noreferrer" >GitHub</a> for the BungeeCord version.
+              Source-Code is available on <a href="https://bitbucket.org/hebrewfix/hebrewfix-plugin/src/develop/" target="_blank" rel="noopener noreferrer" >BitBucket</a> for the Bukkit version and on <a href="https://github.com/LielAmar/HebrewFixBungeecord" target="_blank" rel="noopener noreferrer" >GitHub</a> for the BungeeCord version.
             </p>
           </Work>
 

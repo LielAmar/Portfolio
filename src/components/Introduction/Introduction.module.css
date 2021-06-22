@@ -18,6 +18,16 @@
 
 .introWrapper .logoWrapper {
   margin: 0 2rem 0 0;
+
+  cursor: pointer;
+}
+
+.introWrapper .logoWrapper img {
+  transition: background-color .25s;
+}
+
+.introWrapper .logoWrapper img:hover {
+  background-color: var(--logo-opposite-color);
 }
 
 .introWrapper .logoWrapper > * {

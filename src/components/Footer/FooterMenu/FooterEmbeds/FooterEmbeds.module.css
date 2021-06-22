@@ -7,6 +7,10 @@
   justify-content: center;
 }
 
+.embeds .hidden {
+  display: none;
+}
+
 .embeds .discord {
   width: 300px;
   height: 450px;

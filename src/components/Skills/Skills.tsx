@@ -29,7 +29,7 @@ const Skills: React.FC<props> = () => {
 
           <Skill src={ "/svgs/camera.svg" } title="Video Editor" primaryColor={ "#99ceff" } >
             <p>
-              Adobe <strong>Premiere</strong>, <strong>After Effects</strong> and <strong>Media Encoder</strong> are the main software I use for video editing.
+              Adobe <strong>Premiere</strong>, <strong>After Effects</strong> and <strong>Media Encoder</strong> are the main tools I use for video editing.
               I am also experienced with <strong>Vegas Pro</strong>.
             </p>
           </Skill>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useEffect } from "react";
 
 import Typed from "react-typed";
 
@@ -17,11 +18,31 @@ const words = [
 type props = {}
 
 const Introduction: React.FC<props> = () => {
+  const toggleTheme = () => {
+    document.querySelector("html")?.setAttribute("data-theme", document.querySelector("html")?.getAttribute("data-theme") === "light" ? "dark" : "light");
+
+    // Fixing problems with embeds
+    document.getElementById("discordEmbed")?.setAttribute("src", `https://discordapp.com/widget?id=416652224505184276&theme=${document.querySelector("html")?.getAttribute("data-theme")}`);
+
+    let twitterDark = document.getElementById("twitterEmbedDark");
+    let twitterLight = document.getElementById("twitterEmbedLight");
+
+    if(twitterDark && twitterLight) {
+      if(document.querySelector("html")?.getAttribute("data-theme") === "dark") {
+        twitterDark.style.display = "block";
+        twitterLight.style.display = "none";
+      } else {
+        twitterDark.style.display = "none";
+        twitterLight.style.display = "block";
+      }
+    }
+  }
+
   return (
     <section id="me" className={ styles.intro }>
       <div className={ styles.introWrapper }>
         <div className={ styles.logoWrapper }>
-          <Image id="logo" alt="Grayish-LA-Logo" src="/images/logo.webp" width={ 300 } height={ 300 }/>
+          <Image onClick={ toggleTheme } id="logo" alt="Grayish-LA-Logo" src="/images/logo.webp" width={ 300 } height={ 300 }/>
         </div>
 
         <div className={ styles.textWrapper }>
