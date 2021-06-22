@@ -25,11 +25,11 @@ const FooterEmbeds: React.FC<props> = () => {
       <iframe loading={ "lazy" } id="discordEmbed" className={ styles.discord } src="https://discordapp.com/widget?id=416652224505184276&theme=dark" width="300" height="450" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
 
       <div className={ styles.twitter } id="twitterEmbedDark" style={ theme === "dark" ? { display: "block" } : { display: "none" }}>
-        <a data-theme="dark" data-chrome="transparent" className="twitter-timeline" href="https://twitter.com/IamLielAmar?ref_src=twsrc%5Etfw">Tweets by IamLielAmar</a>
+        <a data-theme="dark" data-tweet-limit="2" data-chrome="transparent" className="twitter-timeline" href="https://twitter.com/IamLielAmar?ref_src=twsrc%5Etfw">Tweets by IamLielAmar</a>
       </div>
 
       <div className={ styles.twitter } id="twitterEmbedLight" style={ theme === "light" ? { display: "block" } : { display: "none" }}>
-        <a data-theme="light" className="twitter-timeline" href="https://twitter.com/IamLielAmar?ref_src=twsrc%5Etfw">Tweets by IamLielAmar</a>
+        <a data-theme="light" data-tweet-limit="2" className="twitter-timeline" href="https://twitter.com/IamLielAmar?ref_src=twsrc%5Etfw">Tweets by IamLielAmar</a>
       </div>
       
     </div>
