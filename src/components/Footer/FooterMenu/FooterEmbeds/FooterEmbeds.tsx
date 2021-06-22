@@ -1,10 +1,12 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import styles from "./FooterEmbeds.module.css";
 
 interface props {}
 
 const FooterEmbeds: React.FC<props> = () => {
+  const [theme, setTheme] = useState("light");
+
   // Importing twitter's widget script
   useEffect(() => {
     const s = document.createElement("script");
@@ -12,6 +14,9 @@ const FooterEmbeds: React.FC<props> = () => {
     s.setAttribute("async", "true");
     s.setAttribute("charset", "utf-8");
     document.head.appendChild(s);
+    
+    // Setting the theme
+    setTheme(window.matchMedia("(prefers-color-scheme: dark").matches ? "dark" : "light");
   }, []);
 
   return (
@@ -20,7 +25,13 @@ const FooterEmbeds: React.FC<props> = () => {
       <iframe loading={ "lazy" } className={ styles.discord } src="https://discordapp.com/widget?id=416652224505184276&theme=dark" width="300" height="450" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
 			
       <div className={ styles.twitter }>
-        <a data-theme="dark" data-chrome="transparent" className="twitter-timeline" href="https://twitter.com/IamLielAmar?ref_src=twsrc%5Etfw">Tweets by IamLielAmar</a>
+        { theme === "dark"
+           ? 
+          <a data-theme="dark" data-chrome="transparent" className="twitter-timeline" href="https://twitter.com/IamLielAmar?ref_src=twsrc%5Etfw">Tweets by IamLielAmar</a>
+          :
+          <a data-theme="light" className="twitter-timeline" href="https://twitter.com/IamLielAmar?ref_src=twsrc%5Etfw">Tweets by IamLielAmar</a>
+        }
+        
       </div>
     </div>
   );

@@ -20,7 +20,7 @@
 
   margin: 0 0 0 1rem;
 
-  background: #202225;
+  background: var(--footer-embeds-background);
   
   border-radius: 5px;
 }

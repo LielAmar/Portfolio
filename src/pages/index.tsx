@@ -36,7 +36,9 @@ const IndexPage = () => {
 
         <Works />
 
-        <Footer><FooterMenu includeEmbeds={ false }/></Footer>
+        <Footer>
+          <FooterMenu includeEmbeds={ true }/>
+          </Footer>
 
       </Layout>
     </>

@@ -3,7 +3,49 @@
 :root {
   --primary: #4da9ff;
   --accent: #99ceff;
+}
 
+html[data-theme='light'] {
+  --text: #000000;
+  --text-secondary: #383838;
+
+  --body-background: #d6d6d6;
+
+  --background-primary: #fffefc;
+  --background-secondary: #F7F7F7;
+  --background-accent: #eeeeee;
+
+  --scrollbar-background: #999897;
+  --scrollbar-thumb: #cccbc9;
+  --scrollbar-thumb-hover: #fffefc;
+
+  --ff-primary: 'Poppins', sans-serif;
+  --ff-accent: 'Assistant', sans-serif;
+
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --fw-extra-bold: 900;
+
+  --navbar-background: #d6d6d6;
+  --navbar-shadow: #616161;
+
+  --intro-logo-background: #ffffff;
+  --intro-logo-shadow: 0px 5px 15px 0px rgb(0 0 0 / 50%);
+
+  --skill-card: #d6d6d6;
+  --skill-icon: #3B3B3B;
+
+  --work-card: #d6d6d6;
+
+  --footer-background: #d6d6d6;
+  --footer-shadow: #272727;
+  --footer-embeds-background: #666;
+  --footer-icon: #272727;
+  --footer-credits-text: #666;
+}
+
+html[data-theme='dark'] {
   --text: #ffffff;
   --text-secondary: #bababa;
 
@@ -38,6 +80,8 @@
 
   --footer-background: #333333;
   --footer-shadow: #272727;
+  --footer-embeds-background: #202225;
+  --footer-icon: #e6e6e6;
   --footer-credits-text: #666;
 }
 
