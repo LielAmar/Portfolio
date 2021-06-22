@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useCookies } from "react-cookie";
 
 import Typed from "react-typed";
 
@@ -17,17 +18,23 @@ const words = [
 type props = {}
 
 const Introduction: React.FC<props> = () => {
+  const [_cookies, setCookie, _removeCookie] = useCookies(["portfolio"]);
+
   const toggleTheme = () => {
-    document.querySelector("html")?.setAttribute("data-theme", document.querySelector("html")?.getAttribute("data-theme") === "light" ? "dark" : "light");
+    let newTheme = document.querySelector("html")?.getAttribute("data-theme") === "light" ? "dark" : "light";
+
+    document.querySelector("html")?.setAttribute("data-theme", newTheme);
+  
+    setCookie("theme", newTheme);
 
     // Fixing problems with embeds
-    document.getElementById("discordEmbed")?.setAttribute("src", `https://discordapp.com/widget?id=416652224505184276&theme=${document.querySelector("html")?.getAttribute("data-theme")}`);
+    document.getElementById("discordEmbed")?.setAttribute("src", `https://discordapp.com/widget?id=416652224505184276&theme=${ newTheme }`);
 
     let twitterDark = document.getElementById("twitterEmbedDark");
     let twitterLight = document.getElementById("twitterEmbedLight");
 
     if(twitterDark && twitterLight) {
-      if(document.querySelector("html")?.getAttribute("data-theme") === "dark") {
+      if(newTheme === "dark") {
         twitterDark.style.display = "block";
         twitterLight.style.display = "none";
       } else {
