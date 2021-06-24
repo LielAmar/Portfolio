@@ -38,7 +38,7 @@ const IndexPage = () => {
 
         <Footer>
           <FooterMenu includeEmbeds={ true }/>
-          </Footer>
+        </Footer>
 
       </Layout>
     </>
