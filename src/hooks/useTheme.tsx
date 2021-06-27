@@ -4,8 +4,9 @@ import { useCookies } from "react-cookie";
 
 /**
  * @deprecated This hook should not be used, but rather the context #ThemeContext or the new hook beneath
+ * @used
  */
-const useThemeOld = (): [string, (newTheme: string) => void] => {
+const _useTheme = (): [string, (newTheme: string) => void] => {
   const [cookies, setCookie, _removeCookie] = useCookies(["portfolio"]);
   const [theme, setTheme] = useState("dark");
 
