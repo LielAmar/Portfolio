@@ -7,5 +7,5 @@ export enum Theme {
 
 export const ThemeContext = React.createContext({
   theme: Theme.light,
-  setTheme: (theme: Theme) => {},
+  setTheme: (theme: Theme) => { theme = theme },
 });
