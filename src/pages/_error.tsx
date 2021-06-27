@@ -12,6 +12,7 @@ import styles from "../styles/error.module.css";
 const Error = ({ statusCode }: { statusCode: Number }) => {
   const router = useRouter();
 
+  // Redirecting to home page after 10 seconds
   useEffect(() => {
     setTimeout(() => router.push("/", undefined, { scroll: false }), 10000);
   });

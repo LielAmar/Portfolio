@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import { Theme, ThemeContext } from "@context/ThemeContext";
+import { Theme, useThemeContext } from "@context/ThemeContext";
 
 import styles from "./FooterEmbeds.module.css";
 
@@ -17,7 +17,7 @@ import styles from "./FooterEmbeds.module.css";
 interface props {}
 
 const FooterEmbeds: React.FC<props> = () => {
-  const themeContext = React.useContext(ThemeContext);
+  const themeContext = useThemeContext();
 
   // Imports twitter's widget script
   useEffect(() => {

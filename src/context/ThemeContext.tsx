@@ -9,3 +9,7 @@ export const ThemeContext = React.createContext({
   theme: Theme.light,
   setTheme: (theme: Theme) => { theme = theme },
 });
+
+export const useThemeContext = () => {
+  return React.useContext(ThemeContext);
+}

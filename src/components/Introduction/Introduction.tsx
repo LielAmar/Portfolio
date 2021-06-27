@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Typed from "react-typed";
 
-import { Theme, ThemeContext } from "@context/ThemeContext";
+import { Theme, useThemeContext } from "@context/ThemeContext";
 
 import styles from "./Introduction.module.css";
 
@@ -30,7 +30,7 @@ const words = [
 interface props {}
 
 const Introduction: React.FC<props> = () => {
-  const themeContext = React.useContext(ThemeContext);
+  const themeContext = useThemeContext();
 
   const toggleTheme = () => themeContext.setTheme(themeContext.theme === Theme.light ? Theme.dark : Theme.light);
 

@@ -23,8 +23,6 @@ interface props {
 }
 
 const SocialItem: React.FC<props> = ({ src, title, href, primaryColor }) => {
-  console.log(src);
-
   return (
     <a href={ href } className={ styles.socialItem } target="_blank" rel="noopener noreferrer" title={ title } >
       <ReactSVG src={ src } wrapper="span" style={ { fill: primaryColor } } />

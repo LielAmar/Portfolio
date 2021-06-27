@@ -44,7 +44,6 @@ const IndexPage = () => {
         <CookieConsent>
           <p>This website uses cookies to improve your experience. You can toggle some cookies off and learn more by visiting our <span><a href="/cookiepolicy">Cookie Policy</a></span> page.</p>
         </CookieConsent>
-
       </Layout>
     </>
   );

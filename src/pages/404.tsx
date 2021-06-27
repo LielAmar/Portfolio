@@ -11,19 +11,21 @@ const FourOhFour = () => {
   const [redirectingMessage, setRedirectingMessage] = useState("Redirecting");
   const router = useRouter();
 
+  // Redirecting to home page after 5 seconds
   useEffect(() => {
     setTimeout(() => router.push("/", undefined, { scroll: false }), 5000);
-
-    setTimeout(() => updateRedirectingMessage(), 400);
+    
+    setTimeout(updateRedirectingMessage, 400);
   });
 
-  const updateRedirectingMessage = (): Boolean => {
+  /**
+   * Updates the redirect message
+   */
+  const updateRedirectingMessage = () => {
     if(redirectingMessage === "Redirecting") setRedirectingMessage("Redirecting.");
     else if(redirectingMessage === "Redirecting.") setRedirectingMessage("Redirecting..");
     else if(redirectingMessage === "Redirecting..") setRedirectingMessage("Redirecting...");
     else if(redirectingMessage === "Redirecting...") setRedirectingMessage("Redirecting");
-    
-    return true;
   }
 
   return (
