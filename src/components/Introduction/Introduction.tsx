@@ -1,10 +1,21 @@
+import React from "react";
 import Image from "next/image";
-
 import Typed from "react-typed";
 
-import useTheme from "hooks/useTheme";
+import { Theme, ThemeContext } from "@context/ThemeContext";
 
 import styles from "./Introduction.module.css";
+
+/**
+ * The Introduction component
+ * 
+ * This component contains the introduction displayed on the index (main) page of the website.
+ * This component uses 1 context:
+ * - ThemeContext (handles the website theme)
+ * 
+ * This component renders an image, the website's logo, acting as a button to switch between the available themes.
+ * It also has multiple text elements to display information, and uses the 'react-types' component to create a type-effect.
+ */
 
 const words = [
   "Fullstack Developer",
@@ -16,12 +27,12 @@ const words = [
   "Freelancer"
 ];
 
-type props = {}
+interface props {}
 
 const Introduction: React.FC<props> = () => {
-  const [theme, setWebsiteTheme] = useTheme();
+  const themeContext = React.useContext(ThemeContext);
 
-  const toggleTheme = () => setWebsiteTheme(theme === "light" ? "dark" : "light");
+  const toggleTheme = () => themeContext.setTheme(themeContext.theme === Theme.light ? Theme.dark : Theme.light);
 
   return (
     <section id="me" className={ styles.intro }>

@@ -2,6 +2,14 @@ import NavbarMenu from "./NavbarMenu/NavbarMenu";
 
 import styles from "./Navbar.module.css";
 
+/**
+ * The Navbar component
+ * 
+ * This component contains the navbar displayed on the index (main) page of the website.
+ * 
+ * This component renders the #NavbarMenu component.
+ */
+
 interface props {}
 
 const Navbar: React.FC<props> = () => {

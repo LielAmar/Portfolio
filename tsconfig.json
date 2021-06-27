@@ -20,8 +20,12 @@
 
     "baseUrl": "./src/",
     "paths": {
+      "@components/*": ["components/*"],
       "@config/*": ["config/*"],
-      "@components/*": ["components/*"]
+      "@context/*": ["context/*"],
+      "@hooks/*": ["hooks/*"],
+      "@pages/*": ["pages/*"],
+      "@styles/*": ["styles/*"]
     }
   },
   "exclude": ["node_modules"],

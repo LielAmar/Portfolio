@@ -1,12 +1,13 @@
 import Head from "next/head";
 
-import Layout from "../components/Layout";
-import Introduction from "../components/Introduction/Introduction";
-import Skills from "../components/Skills/Skills";
-import Works from "../components/Work/Works";
+import Layout from "@components/Layout";
+import Introduction from "@components/Introduction/Introduction";
+import Skills from "@components/Skills/Skills";
+import Works from "@components/Work/Works";
 import Navbar from "@components/Navbar/Navbar";
 import Footer from "@components/Footer/Footer";
 import FooterMenu from "@components/Footer/FooterMenu/FooterMenu";
+import CookieConsent from "@components/CookieConsent/CookieConsent";
 
 import { __project__ } from "../config/global";
 
@@ -39,6 +40,10 @@ const IndexPage = () => {
         <Footer>
           <FooterMenu includeEmbeds={ true }/>
         </Footer>
+
+        <CookieConsent>
+          <p>This website uses cookies to improve your experience. You can toggle some cookies off and learn more by visiting our <span><a href="/cookiepolicy">Cookie Policy</a></span> page.</p>
+        </CookieConsent>
 
       </Layout>
     </>

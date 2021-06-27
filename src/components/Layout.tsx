@@ -1,8 +1,20 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import Head from "next/head";
 
-type props = {
-  children?: ReactNode
+/**
+ * The Layout component
+ * 
+ * This component assembles the default layout of pages, adds basic meta tags, icons and information for each page.
+ * This component receives 3 properties:
+ * - children (any)
+ * - ?title (string): A title for the page
+ * - ?description (string): A description for the page
+ * 
+ * This component renders an icon, title, subtitle and information/children.
+ */
+
+interface props {
+  children?: any
   title?: string
   description?: string
 }

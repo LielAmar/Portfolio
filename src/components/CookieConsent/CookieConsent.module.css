@@ -1,0 +1,52 @@
+.cookieConsent {
+  width: 100%;
+  height: auto;
+
+  padding: 2rem;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 10;
+
+  background-color: var(--cookie-policy-background);
+}
+
+.cookieConsent p {
+  color: var(--text);
+}
+
+.cookieConsent span {
+  color: var(--link-color);
+}
+
+.cookieConsent .buttons {
+  margin-top: .5rem;
+}
+
+.cookieConsent .buttons button {
+  padding: .75rem 1.25rem;
+  
+  border: 0;
+  border-radius: 5px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.cookieConsent .buttons .acceptButton {
+  margin-right: 1rem;
+
+  color: var(--cookie-policy-button-accept-text);
+  background-color: var(--cookie-policy-button-accept-bg);
+}
+
+.cookieConsent .buttons .rejectButton {
+  margin-left: 1rem;
+
+  color: var(--cookie-policy-button-reject-text);
+  background-color: var(--cookie-policy-button-reject-bg);
+}

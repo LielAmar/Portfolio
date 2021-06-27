@@ -16,7 +16,7 @@ const authPage = () => {
   const [_user] = useAuthState(auth);
 
   /**
-   * Function to sing in with a provider
+   * Function to sign in with a provider
    * 
    * @param provider 
    */

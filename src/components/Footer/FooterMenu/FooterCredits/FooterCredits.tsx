@@ -1,5 +1,13 @@
 import styles from "./FooterCredits.module.css";
 
+/**
+ * The FooterCredits component
+ * 
+ * This component contains the footer credits.
+ * 
+ * This component renders the copyright mark & credits
+ */
+
 interface props {}
 
 const FooterCredits: React.FC<props> = () => {

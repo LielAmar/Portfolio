@@ -2,10 +2,17 @@ import Skill from "./Skill/Skill";
 
 import styles from "./Skills.module.css";
 
-type props = {}
+/**
+ * The Skills component
+ * 
+ * This component contains the skills displayed on the index (main) page of the website.
+ * 
+ * This component renders multiple #Skill components with an SVG icon, title, color and text describing each skill.
+ */
+
+interface props {}
 
 const Skills: React.FC<props> = () => {
-
   return (
     <section id="skills" className={ styles.skills }>
       <div className={ styles.skillsWrapper }>
