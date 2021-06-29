@@ -1,4 +1,4 @@
-const __project__ = "Liel Amar";
+const __name__ = "Liel Amar";
 
 const socialLinks = {
   youtube: {
@@ -39,4 +39,4 @@ const socialLinks = {
   }
 }
 
-export { __project__, socialLinks }
+export { __name__, socialLinks }
