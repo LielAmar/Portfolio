@@ -6,7 +6,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import Layout from "../components/Layout";
 
 import firebase from "../../firebase/firebase";
-import { __project__ } from "@config/global";
+import { __name__ } from "@config/global";
 
 const auth = firebase.auth();
 
@@ -49,7 +49,7 @@ const authPage = () => {
         <meta name="twitter:creator" content="@iamlielamar" />
       </Head>
 
-      <Layout title={ `${__project__} - Login` } description={ `Liel Amar's Portfolio Website - Login page` }>
+      <Layout title={ `${__name__} | Login` } description={ `Liel Amar's Portfolio Website - Login page` }>
         <button onClick={ () => signIn(new firebase.auth.GoogleAuthProvider()) }>Sign In With Google</button>
         <button onClick={ () => signIn(new firebase.auth.GithubAuthProvider()) }>Sign In With GitHub</button>
       </Layout>

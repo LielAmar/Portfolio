@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 
 import Layout from "@components/Layout";
 
-import { __project__ } from "@config/global";
+import { __name__ } from "@config/global";
 
 import styles from "../styles/error.module.css";
 
@@ -29,7 +29,7 @@ const FourOhFour = () => {
   }
 
   return (
-    <Layout title={ `Page not found - ${__project__}` } description={ `` }>
+    <Layout title={ `${__name__} | Page Not Found` } description={ `` }>
       
       <div className={ styles.error }>
         <div className={ styles.information }>

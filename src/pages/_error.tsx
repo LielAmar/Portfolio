@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 
 import Layout from "@components/Layout";
 
-import { __project__ } from "@config/global";
+import { __name__ } from "@config/global";
 
 import styles from "../styles/error.module.css";
 
@@ -18,7 +18,7 @@ const Error = ({ statusCode }: { statusCode: Number }) => {
   });
 
   return (
-    <Layout title={ `Page not found - ${__project__}` } description={ `` }>
+    <Layout title={ `${__name__} | An Error Occured` } description={ `` }>
       
       <div className={ styles.error }>
         <h4>{ statusCode ? statusCode : `Client Error` }</h4>
