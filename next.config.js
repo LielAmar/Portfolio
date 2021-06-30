@@ -1,14 +1,16 @@
 const { createSecureHeaders } = require("next-secure-headers");
 
-const stylesheetSources = ["https://localhost:3000", "https://platform.twitter.com"];
-const stylesheetSourcesElements = ["https://fonts.googleapis.com", "https://platform.twitter.com"];
+const defaultSources = ["http://localhost:3000", "https://www.lielamar.com"];
 
-const scriptSources = ["https://localhgost:3000"];
-const scriptSourcesElements = ["http://localhost:3000", "https://www.lielamar.com", "https://platform.twitter.com", "https://cdn.syndication.twimg.com"];
+const stylesheetSources = [...defaultSources, "https://platform.twitter.com"];
+const stylesheetSourcesElements = [...defaultSources, "https://fonts.googleapis.com", "https://platform.twitter.com"];
 
-const fontSources = ["https://fonts.googleapis.com", "https://fonts.gstatic.com"];
-const imageSources = ["http://localhost:3000", "data:", "https://www.lielamar.com", "https://platform.twitter.com", "https://syndication.twitter.com/", "https://abs.twimg.com", "https://pbs.twimg.com"];
-const frameSources = ["http://localhost:3000", "https://www.lielamar.com", "https://platform.twitter.com", "https://cdn.syndication.twimg.com",
+const scriptSources = [...defaultSources];
+const scriptSourcesElements = [...defaultSources, "https://platform.twitter.com", "https://cdn.syndication.twimg.com"];
+
+const fontSources = [...defaultSources, "https://fonts.googleapis.com", "https://fonts.gstatic.com"];
+const imageSources = [...defaultSources, "data:", "https://platform.twitter.com", "https://syndication.twitter.com/", "https://abs.twimg.com", "https://pbs.twimg.com"];
+const frameSources = [...defaultSources, "https://platform.twitter.com", "https://cdn.syndication.twimg.com",
   "https://syndication.twitter.com", "https://discordapp.com", "https://discord.com"];
 
 module.exports = {
