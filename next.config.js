@@ -20,21 +20,21 @@ module.exports = {
         source: "/(.*)",
         headers: createSecureHeaders(
           {
-            // contentSecurityPolicy: {
-            //   directives: {
-            //     defaultSrc: "'self'",
+            contentSecurityPolicy: {
+              directives: {
+                defaultSrc: "'self'",
 
-            //     styleSrc: ["'unsafe-inline'", ...stylesheetSources],
-            //     styleSrcElem: ["'unsafe-inline'", ...stylesheetSourcesElements],
+                styleSrc: ["'unsafe-inline'", ...stylesheetSources],
+                styleSrcElem: ["'unsafe-inline'", ...stylesheetSourcesElements],
 
-            //     scriptSrc: ["'unsafe-inline'", ...scriptSources],
-            //     scriptSrcElem: ["'unsafe-inline'", ...scriptSourcesElements],
+                scriptSrc: ["'unsafe-inline'", ...scriptSources],
+                scriptSrcElem: ["'unsafe-inline'", ...scriptSourcesElements],
 
-            //     fontSrc: ["'unsafe-inline'", ...fontSources],
-            //     imgSrc: ["'unsafe-inline'", ...imageSources],
-            //     frameSrc: ["'unsafe-inline'", ...frameSources],
-            //   },
-            // },
+                fontSrc: ["'unsafe-inline'", ...fontSources],
+                imgSrc: ["'unsafe-inline'", ...imageSources],
+                frameSrc: ["'unsafe-inline'", ...frameSources],
+              },
+            },
             forceHTTPSRedirect: [ true, { includeSubDomains: true }],
             referrerPolicy: "same-origin",
             nosniff: "nosniff",
