@@ -24,14 +24,12 @@ enum DashboardPages {
 const authPage = () => {
   const router = useRouter();
 
-  const { user, logout, loading } = useContext(AuthContext);
+  const { user, loading } = useContext(AuthContext);
   const [menuActive, setMenuActive] = useState<boolean>(false);
   const [dashboardPage, setDashboardPage] = useState<DashboardPages>(DashboardPages.PROFILE);
 
-  const [inputAdminEmail, setInputAdminEmail] = useState<string>("");
-
   // If at some point the user doesn't exists (not logged in) and we are not loading anymore,
-  // we want to redirect the user to / instead of staying in the dashboard page
+  // we want to redirect the user to /login instead of staying in the dashboard page
   useEffect(() => {
     if(!user && !loading)
       router.push("/login");
@@ -87,26 +85,6 @@ const authPage = () => {
         { dashboardPage === DashboardPages.TRACKER && <DashboardTracker user={ user }/>}
       </Layout>
     </>
-
-        // {/* { user &&<h2 style={ { color: "#ffffff" } }>Welcome back, { user.email }.</h2> }
-        // { user && user.isAdmin && <h2 style={ { color: "#ffffff" } }>You are an admin!</h2> }
-
-        // <button onClick={ logout }>Log Out</button>
-
-        // { user && user.isAdmin && <input type="email" value={inputAdminEmail} onChange={event => setInputAdminEmail(event.target.value) }/> }
-        // { user && user.isAdmin && <button onClick={ async () => {
-        //   const addAdmin = firebase.functions().httpsCallable("addAdmin");
-        //   const result = await addAdmin({ executor: user?.uid, email: inputAdminEmail })
-        //   console.log(result);
-        // } }>Add Admin</button> }
-
-        // { user && user.isAdmin && <button onClick={ async () => {
-        //   const removeAdmin = firebase.functions().httpsCallable("removeAdmin");
-        //   const result = await removeAdmin({ executor: user?.uid, email: inputAdminEmail })
-        //   console.log(result);
-        // } }>Remove Admin</button> } */}
-      
-    
   );
 }
 
