@@ -11,9 +11,6 @@ import { AuthContext  } from "@context/AuthContext";
 import { __name__ } from "@config/global";
 
 
-// import styles from "../styles/login.module.css";
-
-
 const authPage = () => {
   const router = useRouter();
   const { user, login, loading } = useContext(AuthContext);
@@ -47,16 +44,6 @@ const authPage = () => {
           <SVGButton src="/svgs/google_g.svg" alt="Google Logo" text="Sign in with Google" borderColor="#4285F4" onClick={ () => login(new firebase.auth.GoogleAuthProvider()) }/>
           <SVGButton src="/svgs/github_colored.svg" alt="GitHub Logo" text="Sign in with GitHub" borderColor="#333333" onClick={ () => login(new firebase.auth.GithubAuthProvider()) }/>
         </CenteredForm>
-
-        <style global>{`
-          html,
-          body,
-          body > div:first-child,
-          div#__next {
-            height: 100%;
-          }
-        `}
-        </style>
       </Layout>
     </>
   );

@@ -11,7 +11,7 @@ type AuthContextValues = {
   loading: boolean
 }
 
-type RoleUser  = firebase.User & {
+export type RoleUser  = firebase.User & {
   isAdmin: boolean
 }
 

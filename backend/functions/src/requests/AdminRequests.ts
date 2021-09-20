@@ -16,20 +16,20 @@ export const addAdminRequest = async (data: any, context: CallableContext) => {
   const isAdminResponse = await isAdmin(context);
   
   if(!isAdminResponse.isAdmin)
-    return { result: isAdminResponse.error };
+    return { status: 403, message: isAdminResponse.error };
 
   
   if(!data.email)
-    return { result: `Invalid request. No email submitted!` };
+    return { status: 400, message: `Invalid request. No Email Address submitted!` };
 
   let adminLevel = data.adminLevel ? data.adminLevel : 1;
 
   try {
     let user = await admin.auth().getUserByEmail(data.email);
     await admin.auth().setCustomUserClaims(user.uid, { admin: true, adminLevel: adminLevel });
-    return `Made ${data.email} an admin account!`;
+    return { status: 200, message: `Made ${data.email} an admin account!` };
   } catch(error) {
-    return { result: error };
+    return { status: 500, message: (error as any).message };
   }
 };
 
@@ -44,17 +44,17 @@ export const removeAdminRequest = async (data: any, context: CallableContext) =>
   const isAdminResponse = await isAdmin(context);
   
   if(!isAdminResponse.isAdmin)
-    return { result: isAdminResponse.error };
+    return { status: 403, message: isAdminResponse.error };
 
   
   if(!data.email)
-    return { result: `Invalid request. No email submitted!` };
+    return { status: 400, message: `Invalid request. No Email Address submitted!` };
 
   try {
     let user = await admin.auth().getUserByEmail(data.email);
     await admin.auth().setCustomUserClaims(user.uid, { admin: false });
-    return `Made ${data.email} a non-admin account!`;
+    return { status: 200, message: `Made ${data.email} a non-admin account!` };
   } catch(error) {
-    return { result: error };
+    return { status: 500, message: (error as any).message };
   }
 };

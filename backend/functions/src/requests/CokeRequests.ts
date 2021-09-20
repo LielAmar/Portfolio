@@ -37,18 +37,18 @@ export const addCokeEntryRequest = async (data: any, context: CallableContext) =
   const isAdminResponse = await isAdmin(context);
   
   if(!isAdminResponse.isAdmin)
-    return { result: isAdminResponse.error };
+    return { status: 403, message: isAdminResponse.error };
 
 
   if(!data.coke_type)
-    return { result: `Invalid request. No coke_type submitted!` };
+    return { status: 400, message: `Invalid request. No Coke Type submitted!` };
 
   let cokeType: CokeType;
 
   if(Object.values(CokeType).some((col: string) => col === data.coke_type))
     cokeType = <CokeType> data.coke_type;
   else
-    return { result: `The received coke_type was invalid!` };
+    return { status: 400, message: `The received Coke Type is invalid!` };
 
   const entry = {
     date: new Date(Date.now()).toLocaleString("he-IL", { timeZone: "Israel" }),
@@ -56,5 +56,5 @@ export const addCokeEntryRequest = async (data: any, context: CallableContext) =
   } as CokeEntry;
 
   const result = await admin.firestore().collection("coke").add({ entry });
-  return { result: `Entry registered in the database with the ID of: "${result.id}".` };
+  return { status: 200, message: `Entry registered in the database with the ID of: "${result.id}".` };
 };

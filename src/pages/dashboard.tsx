@@ -2,26 +2,44 @@ import Head from "next/head";
 import { useContext, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
-import Layout from "../components/Layout";
+import Layout from "@components/Layout";
 import { AuthContext  } from "@context/AuthContext";
+import DashboardHeader from "@components/DashboardHeader/DashboardHeader";
+import Sidebar from "@components/Sidebar/Siderbar";
+import SidebarMenu from "@components/Sidebar/SidebarMenu/SidebarMenu";
+import SidebarItem from "@components/Sidebar/SidebarMenu/SidebarItems/SidebarItem/SidebarItem";
+import SidebarItems from "@components/Sidebar/SidebarMenu/SidebarItems/SidebarItems";
 
 import { __name__ } from "@config/global";
+import DashboardAdmins from "@components/DashboardPages/DashboardAdmins/DashboardAdmins";
+import DashboardTracker from "@components/DashboardPages/DashboardTracker/DashboardTracker";
 
-// import styles from "../styles/dashboard.module.css";
-
+enum DashboardPages {
+  PROFILE,
+  SETTINGS,
+  ADMINS,
+  TRACKER
+}
 
 const authPage = () => {
   const router = useRouter();
+
   const { user, logout, loading } = useContext(AuthContext);
-  
+  const [menuActive, setMenuActive] = useState<boolean>(false);
+  const [dashboardPage, setDashboardPage] = useState<DashboardPages>(DashboardPages.PROFILE);
+
   const [inputAdminEmail, setInputAdminEmail] = useState<string>("");
 
   // If at some point the user doesn't exists (not logged in) and we are not loading anymore,
   // we want to redirect the user to / instead of staying in the dashboard page
   useEffect(() => {
     if(!user && !loading)
-      router.push("/");
+      router.push("/login");
   }, [user, loading]);
+
+
+  const toggleMenu = () => setMenuActive(!menuActive);
+
 
   return (
     <>
@@ -41,26 +59,32 @@ const authPage = () => {
 
 
       <Layout title={ `${__name__} | Dashboard` } description={ `Liel Amar's Portfolio Website - Dashboard page` }>
-        {/* <div className={ styles.dashboard }>
-          <div className={ styles.sidebar }>
+        <DashboardHeader withSearchBar={ false } menuClick={ toggleMenu } pfpClick={ () => console.log("pfp clicked!") } />
 
-            <h2 className={ styles.test }>{ user?.displayName }</h2>
-          </div>
+        <Sidebar active={ menuActive } setActive={ setMenuActive } title={ `Hello, ${ user && user.displayName }!` }>
+          <SidebarMenu>
+            <SidebarItems title="Account">
+              <SidebarItem title="Profile" iconSrc="/svgs/feather/user.svg" active={ false } onClick={ () => {} } />
+              <SidebarItem title="Settings" iconSrc="/svgs/feather/settings.svg" active={ false } onClick={ () => {} } />
+            </SidebarItems>
 
-          <div>Other content</div>
+            { user && user.isAdmin && <SidebarItems title="Admin">
+              <SidebarItem title="Admins" iconSrc="/svgs/feather/user-plus.svg" active={ true } onClick={ () => { setDashboardPage(DashboardPages.ADMINS); setMenuActive(false); } } />
+              <SidebarItem title="Tracker" iconSrc="/svgs/feather/compass.svg" active={ true } onClick={ () => { setDashboardPage(DashboardPages.TRACKER); setMenuActive(false); } } />
+            </SidebarItems> }
 
-          <button onClick={ logout }>Log Out</button>
-        </div> */}
+          </SidebarMenu>
 
-        <style global>{`
-          html,
-          body,
-          body > div:first-child,
-          div#__next {
-            height: 100%;
-          }
-        `}
-        </style>
+          <SidebarItems title="">
+            <SidebarItem title="Close" iconSrc="/svgs/feather/x.svg" active={ true } onClick={ () => setMenuActive(false) } />
+            <SidebarItem title="Logout" iconSrc="/svgs/feather/log-out.svg" active={ true } onClick={ () => { router.push("/logout"); } } />
+          </SidebarItems>
+        </Sidebar>
+
+        {/* { dashboardPage === DashboardPages.PROFILE && <DashboardProfile/>} */}
+        {/* { dashboardPage === DashboardPages.SETTINGS && <DashboardProfile/>} */}
+        { dashboardPage === DashboardPages.ADMINS && <DashboardAdmins user={ user }/> }
+        { dashboardPage === DashboardPages.TRACKER && <DashboardTracker user={ user }/>}
       </Layout>
     </>
 

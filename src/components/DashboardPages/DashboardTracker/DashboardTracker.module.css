@@ -1,0 +1,20 @@
+.addCokeEntry > h3,
+.addBurgerEntry > h3 {
+  color: var(--text-secondary);
+
+  font-family: var(--ff-secondary);
+  font-weight: 700;
+  font-size: 1.75rem;
+
+  text-align: center;
+  text-decoration: underline;
+}
+
+.addCokeEntry .addCokeEntryBody,
+.addBurgerEntry .addBurgerEntryBody {
+  margin-top: 1rem;
+}
+
+.select {
+  margin-top: 1rem;
+}

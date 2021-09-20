@@ -63,7 +63,7 @@
 }
 
 .centeredForm .formWrapper .bottomText > a:hover {
-  color: var(--primary);
+  color: var(--link-color);
 }
 
 

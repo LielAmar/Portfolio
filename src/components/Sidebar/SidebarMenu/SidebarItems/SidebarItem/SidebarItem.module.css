@@ -1,0 +1,27 @@
+.sidebarItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  color: var(--text-secondary);
+
+  cursor: pointer;
+}
+
+.sidebarItem span {
+  font-size: 0;
+  margin-right: .5rem;
+}
+
+.sidebarItem h4 {
+  font-family: var(--ff-secondary);
+  font-weight: 400;
+  font-size: 1rem;
+
+  white-space: nowrap;
+}
+
+.inactive {
+  text-decoration: line-through;
+  color: rgb(163, 22, 22);
+}

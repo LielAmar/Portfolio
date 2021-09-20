@@ -1,0 +1,66 @@
+.dashboardHeader {
+  height: auto;
+  width: 100%;
+
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+
+  z-index: 100;
+
+  background-color: var(--navbar-background);
+  box-shadow: 0px 0px 8px var(--navbar-shadow);
+}
+
+.dashboardHeader .dashboardHeaderWrapper {
+  height: 100%;
+  width: 100%;
+
+  margin: .25rem 0;
+
+  display: flex;
+  
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dashboardHeader .dashboardHeaderWrapper > img {
+  border-radius: 50%;
+}
+
+.dashboardHeader .dashboardHeaderWrapper .dashboardHeaderSearch {
+  display: flex;
+  padding: .5rem .75rem;
+
+  align-items: center;
+
+  background-color: var(--background-accent);
+  border-radius: .25rem;
+  
+  font-size: 0rem;
+}
+
+.dashboardHeader .dashboardHeaderWrapper .dashboardHeaderSearch svg {
+  cursor: pointer;
+  stroke: var(--text);
+}
+
+.dashboardHeader .dashboardHeaderWrapper .dashboardHeaderSearch .dashboardHeaderSearchInput {
+  width: 100%;
+  
+  color: var(--text);
+
+  border: none;
+  outline: none;
+  background-color: var(--background-accent);
+}
+
+.dashboardHeader .dashboardHeaderWrapper .dashboardHeaderSearch .dashboardHeaderSearchInput::placeholder {
+  color: var(--text-secondary);
+}
+
+.dashboardHeader .dashboardHeaderWrapper .dashboardHeaderToggler {
+  font-size: 0rem;
+  cursor: pointer;
+  color: var(--text);
+}

@@ -23,11 +23,12 @@ export const addBurgerEntryRequest = async (data: any, context: CallableContext)
   const isAdminResponse = await isAdmin(context);
   
   if(!isAdminResponse.isAdmin)
-    return { result: isAdminResponse.error };
+    return { status: 403, message: isAdminResponse.error };
 
 
   if(!data.burger_size || !data.restaurant)
-    return { result: `Invalid request. No burger_size or restaurant submitted!` };
+    return { status: 400, message: `Invalid request. No Burger Size or Restaurant submitted!` };
+  
 
   const entry = {
     date: new Date(Date.now()).toLocaleString("he-IL", { timeZone: "Israel" }),
@@ -36,5 +37,5 @@ export const addBurgerEntryRequest = async (data: any, context: CallableContext)
   } as BurgerEntry;
 
   const result = await admin.firestore().collection("burger").add({ entry });
-  return { result: `Entry registered in the database with the ID of: "${result.id}".` };
+  return { status: 200, message: `Entry registered in the database with the ID of: "${result.id}".` };
 };
