@@ -1,0 +1,16 @@
+.addAdmin > h3,
+.removeAdmin > h3 {
+  color: var(--text-secondary);
+
+  font-family: var(--ff-secondary);
+  font-weight: 700;
+  font-size: 1.75rem;
+
+  text-align: center;
+  text-decoration: underline;
+}
+
+.addAdmin .addAdminBody,
+.removeAdmin .removeAdminBody {
+  margin-top: 1rem;
+}

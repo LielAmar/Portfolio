@@ -18,7 +18,6 @@ interface props {}
 const Socials: React.FC<props> = () => {
   // const [forceRenderValue, forceRender] = useState(0);
 
-  // console.log("Rendered the socials element");
   // I honestly don't know why, but since I've implemented the #ThemeContext, every render basically renders twice.
   // You can see it if you uncoment the above log ^.
   // Because of that, ReactSVG, the component I'm using to render svgs in #SocialItem is breaking.

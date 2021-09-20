@@ -20,7 +20,7 @@
 }
 
 .navbarItem a:hover {
-  color: var(--primary);
+  color: var(--link-color);
 }
 
 @media (max-width: 600px) {

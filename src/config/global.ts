@@ -23,7 +23,7 @@ const socialLinks = {
     src: "/svgs/github.svg",
     title: "GitHub",
     link: "https://github.com/lielamar",
-    color: "#CDD9E5"
+    color: "#4078c0"
   },
   npm: {
     src: "/svgs/npm.svg",

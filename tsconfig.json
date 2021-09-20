@@ -25,7 +25,8 @@
       "@context/*": ["context/*"],
       "@hooks/*": ["hooks/*"],
       "@pages/*": ["pages/*"],
-      "@styles/*": ["styles/*"]
+      "@styles/*": ["styles/*"],
+      "@firebase/*": ["../firebase/*"]
     }
   },
   "exclude": ["node_modules"],
