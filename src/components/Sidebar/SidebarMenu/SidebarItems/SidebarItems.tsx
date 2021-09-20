@@ -10,9 +10,7 @@ const SidebarItems: React.FC<props> = ({ title, children }) => {
   return (
     <div className={ styles.sidebarItems }>
       <h3>{ title }</h3>
-
       { children }
-
     </div>
   );
 }
