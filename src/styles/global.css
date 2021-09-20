@@ -10,6 +10,9 @@
   --cookie-policy-button-accept-text: rgba(255, 255, 255, 1);
   --cookie-policy-button-reject-bg: rgba(200, 200, 200, 1);
   --cookie-policy-button-reject-text: rgba(0, 0, 0, 1);
+
+  --google: #4285F4;
+  --github: #333333;
 }
 
 html[data-theme='light'] {
@@ -19,6 +22,7 @@ html[data-theme='light'] {
   --body-background: #d6d6d6;
 
   --background-primary: #fffefc;
+  --background-shadow: #d1d1d1;
   --background-secondary: #F7F7F7;
   --background-accent: #eeeeee;
 
@@ -62,6 +66,7 @@ html[data-theme='dark'] {
   --body-background: #333333;
 
   --background-primary: #212121;
+  --background-shadow: #3b3b3b;
   --background-secondary: #303030;
   --background-accent: #515151;
 
