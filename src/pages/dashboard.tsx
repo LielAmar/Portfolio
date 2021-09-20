@@ -57,7 +57,7 @@ const authPage = () => {
 
 
       <Layout title={ `${__name__} | Dashboard` } description={ `Liel Amar's Portfolio Website - Dashboard page` }>
-        <DashboardHeader withSearchBar={ false } menuClick={ toggleMenu } pfpClick={ () => console.log("pfp clicked!") } />
+        <DashboardHeader withSearchBar={ false } menuClick={ toggleMenu } pfpSource={ user && user.photoURL } pfpClick={ () => {} } />
 
         <Sidebar active={ menuActive } setActive={ setMenuActive } title={ `Hello, ${ user && user.displayName }!` }>
           <SidebarMenu>

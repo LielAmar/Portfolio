@@ -9,7 +9,7 @@ const scriptSources = [...defaultSources, "https://apis.google.com"];
 const scriptSourcesElements = [...defaultSources, "https://platform.twitter.com", "https://cdn.syndication.twimg.com", "https://apis.google.com"];
 
 const fontSources = [...defaultSources, "https://fonts.googleapis.com", "https://fonts.gstatic.com"];
-const imageSources = [...defaultSources, "data:", "https://platform.twitter.com", "https://syndication.twitter.com/", "https://abs.twimg.com", "https://pbs.twimg.com"];
+const imageSources = [...defaultSources, "data:", "https://platform.twitter.com", "https://syndication.twitter.com/", "https://abs.twimg.com", "https://pbs.twimg.com", "https://lh3.googleusercontent.com"];
 const frameSources = [...defaultSources, "https://platform.twitter.com", "https://cdn.syndication.twimg.com",
   "https://syndication.twitter.com", "https://discordapp.com", "https://discord.com", "https://portfolio-25fd0.firebaseapp.com/"];
 

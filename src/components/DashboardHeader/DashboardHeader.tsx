@@ -5,12 +5,13 @@ import styles from "./DashboardHeader.module.css";
 
 interface props {
   menuClick: () => any
+  pfpSource: string | null
   pfpClick: () => any
   withSearchBar: boolean
   searchOperation?: () => any
 }
 
-const DashboardHeader: React.FC<props> = ({ menuClick, pfpClick, withSearchBar, searchOperation }) => {
+const DashboardHeader: React.FC<props> = ({ menuClick, pfpSource, pfpClick, withSearchBar, searchOperation }) => {
   return (
     <header className={ styles.dashboardHeader }>
       <div className={ styles.dashboardHeaderWrapper }>
@@ -25,7 +26,7 @@ const DashboardHeader: React.FC<props> = ({ menuClick, pfpClick, withSearchBar, 
           </div>
         }
 
-        <Image src="/images/logo.webp" width="35px" height="35px" onClick={ pfpClick }/>
+        <Image src={ "/images/logo.webp" } loader={ () => pfpSource ? pfpSource : "" } width="50px" height="50px" onClick={ pfpClick }/>
       </div>
     </header>
   );
