@@ -20,9 +20,8 @@ const DashboardHeader: React.FC<props> = ({ menuClick, pfpClick, withSearchBar, 
 
         { withSearchBar && 
           <div className={ styles.dashboardHeaderSearch }>
-            <input type="text" placeholder="Search" className={ styles.dashboardHeaderSearchInput } />
+            <input type="text" placeholder="Search" className={ styles.dashboardHeaderSearchInput } onChange={ searchOperation }/>
             <ReactSVG src="/svgs/feather/search.svg" wrapper="div" />
-            {/* TODO: add the search operation */}
           </div>
         }
 
