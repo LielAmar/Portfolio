@@ -2,7 +2,7 @@
   height: auto;
   width: 100%;
 
-  padding: 0 1rem;
+  padding: .5rem 1rem;
   display: flex;
   align-items: center;
 
@@ -63,4 +63,15 @@
   font-size: 0rem;
   cursor: pointer;
   color: var(--text);
+}
+
+.dashboardHeader .dashboardHeaderWrapper .dashboardHeaderToggler svg {
+  height: 35px;
+  width: 35px;
+}
+
+
+.dashboardHeader .dashboardHeaderWrapper img {
+  height: 45px;
+  width: 45px;
 }

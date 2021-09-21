@@ -1,4 +1,5 @@
 import Image from "next/image";
+import imageLoader from "utils/ImageLoader";
 
 import styles from "./SVGButton.module.css";
 
@@ -25,7 +26,7 @@ interface props {
 const SVGButton: React.FC<props> = ({ src, alt, text, borderColor, onClick }) => {
   return (
     <div className={ styles.rectengleSvgButton } style={ { borderStyle: "solid", borderWidth: "2px", borderRadius: "0.5rem", borderColor: borderColor } } onClick={ onClick }>
-      <Image src={ src } alt={ alt } width={ 20 } height={ 20 }/>
+      <Image loader={ () => imageLoader(src, 20) } src={ src } alt={ alt } width={ 20 } height={ 20 }/>
       <h3>{ text }</h3>
     </div>
   );

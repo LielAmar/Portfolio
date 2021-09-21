@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ReactSVG } from "react-svg";
+import imageLoader from "utils/ImageLoader";
 
 import styles from "./DashboardHeader.module.css";
 
@@ -26,7 +27,7 @@ const DashboardHeader: React.FC<props> = ({ menuClick, pfpSource, pfpClick, with
           </div>
         }
 
-        <Image src={ "/images/logo.webp" } loader={ () => pfpSource ? pfpSource : "" } width="50px" height="50px" onClick={ pfpClick }/>
+        <Image src={ "/images/logo.webp" } loader={ () => imageLoader(pfpSource ? pfpSource : "/images/logo.webp", 40) } width={ 40 } height={ 40 } onClick={ pfpClick }/>
       </div>
     </header>
   );
