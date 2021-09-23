@@ -38,7 +38,7 @@ const Introduction: React.FC<props> = () => {
     <section id="me" className={ styles.intro }>
       <div className={ styles.introWrapper }>
         <div className={ styles.logoWrapper }>
-          <Image onClick={ toggleTheme } id="logo" alt="Grayish-LA-Logo" src="/images/logo.webp" width={ 300 } height={ 300 }/>
+          <Image onClick={ toggleTheme } id="logo" alt="Grayish-LA-Logo" src="/images/logo.webp" width={ 300 } height={ 300 } priority={ true }/>
         </div>
 
         <div className={ styles.textWrapper }>
