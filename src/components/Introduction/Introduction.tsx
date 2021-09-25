@@ -1,5 +1,5 @@
 import React from "react";
-// import Image from "next/image";
+import Image from "next/image";
 import Typed from "react-typed";
 
 import { Theme, useThemeContext } from "@context/ThemeContext";
@@ -38,7 +38,7 @@ const Introduction: React.FC<props> = () => {
     <section id="me" className={ styles.intro }>
       <div className={ styles.introWrapper }>
         <div className={ styles.logoWrapper }>
-          <img onClick={ toggleTheme }  id="logo" alt="Grayish-LA-Logo" src="/images/logo.webp" width={ 300 } height={ 300 }/>
+          <Image onClick={ toggleTheme }  id="logo" alt="Grayish-LA-Logo" src="/images/logo.webp" width={ 300 } height={ 300 }/>
         </div>
 
         <div className={ styles.textWrapper }>

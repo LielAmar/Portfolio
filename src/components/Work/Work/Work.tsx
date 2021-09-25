@@ -1,4 +1,4 @@
-// import Image from "next/image";
+import Image from "next/image";
 
 import styles from "./Work.module.css";
 
@@ -32,7 +32,7 @@ const Work: React.FC<props> = ({ src, alt, iconHref, title, titleHref, role, chi
   return (
     <div className={ styles.work }>
       <a href={ iconHref } target="_blank" rel="noopener noreferrer" >
-        <img src={ src } alt={ alt } width={ 250 } height={ 250 } loading="lazy" />
+        <Image src={ src } alt={ alt } width={ 250 } height={ 250 } loading="lazy" />
       </a>
 
       <a href={ titleHref } target="_blank" rel="noopener noreferrer" ><h2>{ title }</h2></a>

@@ -1,4 +1,4 @@
-// import Image from "next/image";
+import Image from "next/image";
 import { ReactSVG } from "react-svg";
 
 import styles from "./Header.module.css";
@@ -38,7 +38,7 @@ const Header: React.FC<props> = ({ menuClick, pfpSource, pfpClick, withSearchBar
           </div>
         }
 
-        <img src={ pfpSource ? pfpSource : "/images/logo.webp" } width={ 40 } height={ 40 } onClick={ pfpClick }/>
+        <Image src={ "/images/logo.webp" } loader={ () => pfpSource ? pfpSource : "/images/logo.webp" } width={ 40 } height={ 40 } onClick={ pfpClick }/>
       </div>
     </header>
   );
