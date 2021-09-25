@@ -16,6 +16,7 @@ backend/
 build/
 out/
 dist/
+opt/
 
 # misc
 *.DS_Store

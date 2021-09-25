@@ -1,6 +1,6 @@
 const { createSecureHeaders } = require("next-secure-headers");
 
-const defaultSources = ["http://localhost:3000", "https://www.lielamar.com"];
+const defaultSources = ["http://localhost:3000", "https://www.lielamar.com", "https://dev.lielamar.com/"];
 
 const stylesheetSources = [...defaultSources, "https://platform.twitter.com"];
 const stylesheetSourcesElements = [...defaultSources, "https://fonts.googleapis.com", "https://platform.twitter.com"];
