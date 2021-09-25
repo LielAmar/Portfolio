@@ -1,6 +1,3 @@
-import Image from "next/image";
-import imageLoader from "utils/ImageLoader";
-
 import styles from "./SVGButton.module.css";
 
 /**
@@ -18,15 +15,17 @@ import styles from "./SVGButton.module.css";
 interface props {
   src: string
   alt: string
+  iconWidth: number
+  iconHeight: number
   text: string
   borderColor: string
   onClick: () => void
 }
 
-const SVGButton: React.FC<props> = ({ src, alt, text, borderColor, onClick }) => {
+const SVGButton: React.FC<props> = ({ src, alt, iconWidth, iconHeight, text, borderColor, onClick }) => {
   return (
     <div className={ styles.rectengleSvgButton } style={ { borderStyle: "solid", borderWidth: "2px", borderRadius: "0.5rem", borderColor: borderColor } } onClick={ onClick }>
-      <Image loader={ () => imageLoader(src, 20) } src={ src } alt={ alt } width={ 20 } height={ 20 }/>
+      <img src={ src } alt={ alt } width={ iconWidth } height={ iconHeight }/>
       <h3>{ text }</h3>
     </div>
   );

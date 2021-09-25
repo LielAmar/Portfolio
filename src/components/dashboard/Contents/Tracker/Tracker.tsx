@@ -1,20 +1,56 @@
-import firebase from "firebase";
-import { useContext, useState } from "react";
+import { getFunctions, httpsCallable } from "firebase/functions";
+import { MutableRefObject, useContext, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import Select, { Theme } from "react-select";
 import Creatable from "react-select/creatable";
 
 import { RoleUser } from "@context/AuthContext";
 
-import styles from "./DashboardTracker.module.css";
+import styles from "./Tracker.module.css";
 import dashboardStyles from "../Dashboard.module.css";
 import { Theme as ThemeContextTheme, ThemeContext } from "@context/ThemeContext";
+
+
+/**
+ * The Dashboard/Tracker component
+ * 
+ * This component displays the tracker page in the dashboard.
+ * This component receives 1 property:
+ * - user (RoleUser): Instance of the current logged in user
+ */
+
+const functions = getFunctions();
 
 interface props {
   user: RoleUser | null
 }
 
+/**
+ * The theme of the select button
+ * 
+ * @param theme           Existing select button theme
+ * @param themeProvider   User selected website theme
+ */
+ const selectButtonTheme = (theme: Theme, themeProvider: { theme: ThemeContextTheme }) => {
+  return { 
+    ...theme,
+    colors: {
+      ...theme.colors,
+      primary25: "#99ceff",
+      primary: themeProvider.theme === ThemeContextTheme.dark ? "rgb(214, 214, 214)" : "rgba(124, 124, 124, 0.35)",
+      neutral0: themeProvider.theme === ThemeContextTheme.dark ? "#606060" : "#d6d6d6",
+      neutral80: themeProvider.theme === ThemeContextTheme.dark ? "#fff" : "#000",
+      neutral90: themeProvider.theme === ThemeContextTheme.dark ? "#fff" : "#000"
+    },
+    borderColor: "none",
+    borderStyle: "none",
+    opacity: themeProvider.theme === ThemeContextTheme.dark ? 0.35 : 0.5
+  }
+}
 
+/**
+ * All coke options when creating a new entry
+ */
 const cokeOptions = [
   { value: "plastic_250_ml", label: "Plastic Bottle 250ml" },
   { value: "plastic_500_ml", label: "Plastic Bottle 500ml" },
@@ -28,6 +64,9 @@ const cokeOptions = [
   { value: "large_cup", label: "Large Cup" },
 ]
 
+/**
+ * All burger size options when creating a new entry
+ */
 const burgerSizeOptions = [
   { value: "30_g", label: "30 Gram" },
   { value: "40_g", label: "40 Gram" },
@@ -79,6 +118,9 @@ const burgerSizeOptions = [
   { value: "500_g", label: "500 Gram" },
 ]
 
+/**
+ * All burger restaurants options when creating a new entry
+ */
 const burgerRestaurantsOptions = [
   { value: "McDonald's", label: "McDonald's" },
   { value: "Burgers Bar", label: "Burgers Bar" },
@@ -111,7 +153,8 @@ const burgerRestaurantsOptions = [
   { value: "Humongous", label: "Humongous" },
 ]
 
-const DashboardTracker: React.FC<props> = ({ user }) => {
+
+const Tracker: React.FC<props> = ({ user }) => {
   const router = useRouter();
   const themeProvider = useContext(ThemeContext);
 
@@ -126,26 +169,21 @@ const DashboardTracker: React.FC<props> = ({ user }) => {
   const [addBurgerEntryError, setAddBurgerEntryError] = useState("");
   const [addBurgerEntrySuccess, setAddBurgerEntrySuccess] = useState("");
 
+  // isMounted is used to keep track on whether the current component is mounted or not. We check it when executing certain functions to avoid memory leaks.
+  const isMounted: MutableRefObject<null | boolean> = useRef(null);
 
-  const selectTheme = (theme: Theme) => {
-    return { 
-      ...theme,
-      colors: {
-        ...theme.colors,
-        primary25: "#99ceff",
-        primary: themeProvider.theme === ThemeContextTheme.dark ? "rgb(214, 214, 214)" : "rgba(124, 124, 124, 0.35)",
-        neutral0: themeProvider.theme === ThemeContextTheme.dark ? "#606060" : "#d6d6d6",
-        neutral80: themeProvider.theme === ThemeContextTheme.dark ? "#fff" : "#000",
-        neutral90: themeProvider.theme === ThemeContextTheme.dark ? "#fff" : "#000"
-      },
-      borderColor: "none",
-      borderStyle: "none",
-      opacity: themeProvider.theme === ThemeContextTheme.dark ? 0.35 : 0.5
-    }
-  }
+  useEffect(() => {
+    isMounted.current = true;
+    return () => { isMounted.current = false; }
+  }, []);
 
 
-  const addCokeEntry = async () => {
+  /**
+   * Adds a new coke entry to the system
+   * 
+   * @param coke_type   The type of the coke to add
+   */
+  const addCokeEntry = async (coke_type: string) => {
     if(!user)
       return router.push("/login");
 
@@ -155,21 +193,29 @@ const DashboardTracker: React.FC<props> = ({ user }) => {
     if(!user.isAdmin)
       return setAddCokeEntryError("You don't have permissions to do that!");
 
-    if(!addCokeEntryValue)
+    if(!coke_type)
       return setAddCokeEntryError("Invalid Coke Type!");
 
     setLoading(true);
-    const cokeEntry = firebase.functions().httpsCallable("cokeEntry");
-    const result = await cokeEntry({ executor: user?.uid, coke_type: addCokeEntryValue });
-    setLoading(false);
+    const cokeEntry = httpsCallable(functions, "cokeEntry");
+    const result = await cokeEntry({ executor: user?.uid, coke_type });
+    if(isMounted.current) setLoading(false);
 
-    if(result.data.status !== 200)
-      return setAddCokeEntryError(result.data.message);
+    const data = result.data as any;
+
+    if(data.status !== 200 && isMounted.current)
+      return setAddCokeEntryError(data.message);
     
-    setAddCokeEntrySuccess(result.data.message);
+    if(isMounted.current) setAddCokeEntrySuccess(data.message);
   }
 
-  const addBurgerEntry = async () => {
+  /**
+   * Adds a new burger entry to the system
+   * 
+   * @param burger_size   The size of the burger to add
+   * @param restaurant    The restaurant of the burger to add
+   */
+  const addBurgerEntry = async (burger_size: string, restaurant: string) => {
     if(!user)
       return router.push("/login");
 
@@ -179,22 +225,25 @@ const DashboardTracker: React.FC<props> = ({ user }) => {
     if(!user.isAdmin)
       return setAddBurgerEntryError("You don't have permissions to do that!");
 
-    if(!addBurgerEntrySizeValue || !addBurgerEntryRestaurantValue)
+    if(!burger_size || !restaurant)
       return setAddBurgerEntryError("Invalid Burger Size/Restaurant Type!");
 
     setLoading(true);
-    const burgerEntry = firebase.functions().httpsCallable("burgerEntry");
-    const result = await burgerEntry({ executor: user?.uid, burger_size: addBurgerEntrySizeValue, restaurant: addBurgerEntryRestaurantValue });
-    setLoading(false);
+    const burgerEntry = httpsCallable(functions, "burgerEntry");
+    const result = await burgerEntry({ executor: user?.uid, burger_size: burger_size, restaurant: restaurant });
+    if(isMounted.current) setLoading(false);
 
-    if(result.data.status !== 200)
-      return setAddBurgerEntryError(result.data.message);
+    const data = result.data as any;
+
+    if(data.status !== 200 && isMounted.current)
+      return setAddBurgerEntryError(data.message);
     
-    setAddBurgerEntrySuccess(result.data.message);
+    if(isMounted.current) setAddBurgerEntrySuccess(data.message);
   }
 
+
   return (
-    <div className={ dashboardStyles.dashboardPage }>
+    <div className={ dashboardStyles.dashboardConntent }>
       <div className={ ` ${dashboardStyles.dashboardBullet} ${ styles.addCokeEntry }` }>
         <h3>Add Coke Entry</h3>
 
@@ -202,10 +251,10 @@ const DashboardTracker: React.FC<props> = ({ user }) => {
           <p className={ dashboardStyles.errorMessage }>{ addCokeEntryError }</p>
           <p className={ dashboardStyles.successMessage }>{ addCokeEntrySuccess }</p>
 
-          <Select options={ cokeOptions } theme={ selectTheme } className={ styles.select } placeholder="Select Coke Type" isSearchable={ true }
+          <Select options={ cokeOptions } theme={ (theme) => selectButtonTheme(theme, themeProvider) } className={ styles.select } placeholder="Select Coke Type" isSearchable
             onChange={ event => event && setAddCokeEntryValue(event.value) } />
 
-          <button className={ dashboardStyles.button } onClick={ addCokeEntry } disabled={ loading }>Execute</button>
+          <button className={ dashboardStyles.button } onClick={ () => addCokeEntry(addCokeEntryValue) } disabled={ loading }>Execute</button>
         </div>
       </div>
 
@@ -216,16 +265,16 @@ const DashboardTracker: React.FC<props> = ({ user }) => {
           <p className={ dashboardStyles.errorMessage }>{ addBurgerEntryError }</p>
           <p className={ dashboardStyles.successMessage }>{ addBurgerEntrySuccess }</p>
 
-          <Creatable options={ burgerSizeOptions } theme={ selectTheme } className={ styles.select } placeholder="Select Burger Size" isSearchable={ true }
+          <Creatable options={ burgerSizeOptions } theme={ (theme) => selectButtonTheme(theme, themeProvider) } className={ styles.select } placeholder="Select Burger Size" isSearchable
             onChange={ event => event && setAddBurgerEntrySizeValue(event.value) } />
-          <Creatable options= { burgerRestaurantsOptions } theme={ selectTheme } className={ styles.select } placeholder="Select Burger Restaurant" isSearchable={ true }
+          <Creatable options= { burgerRestaurantsOptions } theme={ (theme) => selectButtonTheme(theme, themeProvider) } className={ styles.select } placeholder="Select Burger Restaurant" isSearchable
             onChange={ event => event && setAddBurgerEntryRestaurantValue(event.value) } />
 
-          <button className={ dashboardStyles.button } onClick={ addBurgerEntry } disabled={ loading }>Execute</button>
+          <button className={ dashboardStyles.button } onClick={ () => addBurgerEntry(addBurgerEntrySizeValue, addBurgerEntryRestaurantValue) } disabled={ loading }>Execute</button>
         </div>
       </div>
     </div>
   );
 }
 
-export default DashboardTracker;
+export default Tracker;

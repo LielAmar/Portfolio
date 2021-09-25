@@ -1,11 +1,10 @@
 import React from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import Typed from "react-typed";
 
 import { Theme, useThemeContext } from "@context/ThemeContext";
 
 import styles from "./Introduction.module.css";
-import imageLoader from "utils/ImageLoader";
 
 /**
  * The Introduction component
@@ -39,13 +38,13 @@ const Introduction: React.FC<props> = () => {
     <section id="me" className={ styles.intro }>
       <div className={ styles.introWrapper }>
         <div className={ styles.logoWrapper }>
-          <Image onClick={ toggleTheme } loader={ () => imageLoader("/images/logo.webp", 300) } id="logo" alt="Grayish-LA-Logo" src="/images/logo.webp" width={ 300 } height={ 300 }/>
+          <img onClick={ toggleTheme }  id="logo" alt="Grayish-LA-Logo" src="/images/logo.webp" width={ 300 } height={ 300 }/>
         </div>
 
         <div className={ styles.textWrapper }>
           <h2>Hey, I am <strong>Liel Amar</strong>.</h2>
 
-          <p>I am a <Typed strings={ words } typeSpeed={ 60 } backSpeed={ 60 } loop={ true }></Typed></p>
+          <p>I am a <Typed strings={ words } typeSpeed={ 60 } backSpeed={ 60 } loop></Typed></p>
           <p>with over <strong>7 years</strong> of experience.</p>
         </div>
 

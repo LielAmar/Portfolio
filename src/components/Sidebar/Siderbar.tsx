@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-import useOutsideComponentClick from "@hooks/OutsideComponentClick";
+import useOutsideComponentClick from "@hooks/useOutsideComponentClick";
 
 import styles from "./Sidebar.module.css";
 

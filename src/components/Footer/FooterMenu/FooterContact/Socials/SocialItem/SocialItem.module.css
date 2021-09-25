@@ -1,13 +1,7 @@
 .socialItem {
+  height: 50px;
+  
   margin: 0 .75rem;
-}
-
-.socialItem:first-of-type {
-  margin-left: 0 !important;
-}
-
-.socialItem:last-of-type {
-  margin-right: 0 !important;
 }
 
 .socialItem span svg:hover {
