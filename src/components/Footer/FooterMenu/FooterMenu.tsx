@@ -22,7 +22,7 @@ interface props {
 }
 
 const FooterMenu: React.FC<props> = ({ includeEmbeds = true }) => {
-  const [_cookieConsentSelected, hasCookieConsent, _updateCookieConsent] = useCookieConsent();
+  const [_cookieConsentSelected, _setCookieConsentSelected, hasCookieConsent, _updateCookieConsent] = useCookieConsent();
 
   return (
     <div className={ styles.footerContainer }>

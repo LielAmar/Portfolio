@@ -16,6 +16,12 @@
   font-size: 1rem;
 }
 
-.credits p span a {
+.credits p:first-of-type { text-align: left; }
+
+.credits p:last-of-type { text-align: right; }
+
+.credits p span {
+  cursor: pointer;
+  
   text-decoration: underline;
 }

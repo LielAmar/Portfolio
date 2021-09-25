@@ -1,8 +1,8 @@
-.dashboardHeader {
+.header {
   height: auto;
   width: 100%;
 
-  padding: 0 1rem;
+  padding: .5rem 1rem;
   display: flex;
   align-items: center;
 
@@ -12,7 +12,7 @@
   box-shadow: 0px 0px 8px var(--navbar-shadow);
 }
 
-.dashboardHeader .dashboardHeaderWrapper {
+.header .headerWrapper {
   height: 100%;
   width: 100%;
 
@@ -24,11 +24,11 @@
   justify-content: space-between;
 }
 
-.dashboardHeader .dashboardHeaderWrapper img {
+.header .headerWrapper img {
   border-radius: 50%;
 }
 
-.dashboardHeader .dashboardHeaderWrapper .dashboardHeaderSearch {
+.header .headerWrapper .headerSearch {
   display: flex;
   padding: .5rem .75rem;
 
@@ -40,12 +40,12 @@
   font-size: 0rem;
 }
 
-.dashboardHeader .dashboardHeaderWrapper .dashboardHeaderSearch svg {
+.header .headerWrapper .headerSearch svg {
   cursor: pointer;
   stroke: var(--text);
 }
 
-.dashboardHeader .dashboardHeaderWrapper .dashboardHeaderSearch .dashboardHeaderSearchInput {
+.header .headerWrapper .headerSearch .headerSearchInput {
   width: 100%;
   
   color: var(--text);
@@ -55,12 +55,23 @@
   background-color: var(--background-accent);
 }
 
-.dashboardHeader .dashboardHeaderWrapper .dashboardHeaderSearch .dashboardHeaderSearchInput::placeholder {
+.header .headerWrapper .headerSearch .headerSearchInput::placeholder {
   color: var(--text-secondary);
 }
 
-.dashboardHeader .dashboardHeaderWrapper .dashboardHeaderToggler {
+.header .headerWrapper .headerToggler {
   font-size: 0rem;
   cursor: pointer;
   color: var(--text);
+}
+
+.header .headerWrapper .headerToggler svg {
+  height: 35px;
+  width: 35px;
+}
+
+
+.header .headerWrapper img {
+  height: 45px;
+  width: 45px;
 }

@@ -32,6 +32,7 @@
 
 .introWrapper .logoWrapper > * {
   max-width: 15rem;
+  height: 100%;
 
   box-shadow: var(--intro-logo-shadow);
 

@@ -7,7 +7,7 @@ import { useEffect } from "react";
  * This hook checks if the user selected their prefered cookie policy status (accept/reject) and returns a value
  * telling whether the user selected either and which one they have selected
  */
-const useCookieConsent = (): [boolean, boolean, (value: boolean) => void] => {
+const useCookieConsent = (): [boolean, (value: boolean) => void, boolean, (value: boolean) => void] => {
   const [cookieConsentSelected, setCookieConsentSelected] = useState(false);
   const [hasCookieConsent, setCookieConsent] = useState(false);
 
@@ -29,7 +29,7 @@ const useCookieConsent = (): [boolean, boolean, (value: boolean) => void] => {
     window.localStorage.setItem("cookie_consent", `${value}`);
   }
 
-  return [cookieConsentSelected, hasCookieConsent, updateCookieConsent];
+  return [cookieConsentSelected, setCookieConsentSelected, hasCookieConsent, updateCookieConsent];
 }
 
 export default useCookieConsent;

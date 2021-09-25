@@ -6,6 +6,9 @@ node_modules/
 # testing
 coverage/
 
+# backend
+backend/
+
 # next.js
 .next/
 
@@ -13,6 +16,7 @@ coverage/
 build/
 out/
 dist/
+opt/
 
 # misc
 *.DS_Store

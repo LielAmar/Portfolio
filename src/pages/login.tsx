@@ -1,11 +1,11 @@
 import Head from "next/head";
-import firebase from "firebase";
+import { GoogleAuthProvider, GithubAuthProvider } from "firebase/auth";
 import { useContext, useEffect } from "react";
 import { useRouter } from "next/router";
 
 import Layout from "../components/Layout";
-import CenteredForm from "@components/CenteredForm/CenteredForm";
-import SVGButton from "@components/Button/SVGButton/SVGButton";
+import CenteredForm from "@components/common/CenteredForm/CenteredForm";
+import SVGButton from "@components/common/Button/SVGButton/SVGButton";
 import { AuthContext  } from "@context/AuthContext";
 
 import { __name__ } from "@config/global";
@@ -41,8 +41,8 @@ const authPage = () => {
 
       <Layout title={ `${__name__} | Login` } description={ `Liel Amar's Portfolio Website - Login page` }>
         <CenteredForm title="Login" footer="Back to Home Page" footerLink="/">
-          <SVGButton src="/svgs/google_g.svg" alt="Google Logo" text="Sign in with Google" borderColor="#4285F4" onClick={ () => login(new firebase.auth.GoogleAuthProvider()) }/>
-          <SVGButton src="/svgs/github_colored.svg" alt="GitHub Logo" text="Sign in with GitHub" borderColor="#333333" onClick={ () => login(new firebase.auth.GithubAuthProvider()) }/>
+          <SVGButton src="/svgs/google_g.svg" alt="Google Logo" iconWidth={ 20 } iconHeight={ 20 } text="Sign in with Google" borderColor="#4285F4" onClick={ () => login(new GoogleAuthProvider()) }/>
+          <SVGButton src="/svgs/github_colored.svg" alt="GitHub Logo" iconWidth={ 20 } iconHeight={ 20 } text="Sign in with GitHub" borderColor="#333333" onClick={ () => login(new GithubAuthProvider()) }/>
         </CenteredForm>
       </Layout>
     </>

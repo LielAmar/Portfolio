@@ -17,16 +17,17 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "esnext",
+    "outDir": "dist",
 
     "baseUrl": "./src/",
     "paths": {
       "@components/*": ["components/*"],
       "@config/*": ["config/*"],
       "@context/*": ["context/*"],
+      "@firebase/*": ["firebase/*"],
       "@hooks/*": ["hooks/*"],
       "@pages/*": ["pages/*"],
-      "@styles/*": ["styles/*"],
-      "@firebase/*": ["../firebase/*"]
+      "@styles/*": ["styles/*"]
     }
   },
   "exclude": ["node_modules"],
