@@ -17,6 +17,7 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "esnext",
+    "outDir": "dist",
 
     "baseUrl": "./src/",
     "paths": {
