@@ -3,8 +3,7 @@ import React, { useEffect, useState } from "react";
 import app from "@firebase/firebase";
 import { getAuth, signInWithPopup, onAuthStateChanged, AuthProvider, User, UserCredential } from "firebase/auth";
 
-app.data;
-
+app;
 const auth = getAuth();
 
 
