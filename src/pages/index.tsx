@@ -41,7 +41,7 @@ const IndexPage = () => {
         <Works />
 
         <Footer>
-          <FooterMenu includeEmbeds={ true }/>
+          <FooterMenu includeEmbeds/>
         </Footer>
 
         <CookieConsent>

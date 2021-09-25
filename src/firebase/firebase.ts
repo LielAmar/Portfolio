@@ -1,7 +1,5 @@
-import firebase from "firebase/app";
-// import "firebase/analytnics";
-import "firebase/auth";
-import "firebase/firestore";
+import { getApps, initializeApp, FirebaseApp } from "firebase/app";
+import { getAnalytics, isSupported } from "firebase/analytics";
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -13,13 +11,13 @@ const firebaseConfig = {
   measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
 };
 
-let app;
+let app: FirebaseApp;
 
-if(!firebase.apps.length) {
-  app = firebase.initializeApp(firebaseConfig);
-  // firebase.analytics();
+if(!getApps().length) {
+  app = initializeApp(firebaseConfig);
+  
+  isSupported().then(result => result && getAnalytics());
 } else
-  app = firebase.apps[0];
+  app = getApps()[0];1
 
-export const auth = app.auth();
 export default app;

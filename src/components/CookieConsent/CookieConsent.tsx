@@ -1,4 +1,5 @@
 import useCookieConsent from "hooks/useCookieConsent";
+import { useEffect } from "react";
 
 import styles from "./CookieConsent.module.css";
 
@@ -17,7 +18,7 @@ interface props {
 }
 
 const CookieConsent: React.FC<props> = ({ children }) => {
-  const [cookieConsentSelected, _hasCookieConsent, updateCookieConsent] = useCookieConsent();
+  const [cookieConsentSelected, _setCookieConsentSelected, _hasCookieConsent, updateCookieConsent] = useCookieConsent();
 
   return (
     <>

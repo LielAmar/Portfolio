@@ -58,7 +58,6 @@ const FooterEmbeds: React.FC<props> = () => {
       <div className={ styles.twitter } id="twitterEmbedLight">
         <a data-theme="light" data-tweet-limit="3" className="twitter-timeline" href="https://twitter.com/IamLielAmar?ref_src=twsrc%5Etfw">Tweets by IamLielAmar</a>
       </div>
-      
     </div>
   );
 }

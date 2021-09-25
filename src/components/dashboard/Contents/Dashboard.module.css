@@ -1,4 +1,4 @@
-.dashboardPage {
+.dashboardConntent {
   height: fit-content;
   width: 100%;
 
@@ -8,7 +8,7 @@
   padding: 2rem 4rem;
 }
 
-.dashboardPage .dashboardBullet {
+.dashboardConntent .dashboardBullet {
   width: auto;
   height: fit-content;
 
@@ -19,14 +19,12 @@
   border-radius: .75rem;
 }
 
-.dashboardPage .dashboardBullet:first { margin-right: 1rem; }
-.dashboardPage .dashboardBullet:last-child { margin-left: 1rem; }
+.dashboardConntent .dashboardBullet:first { margin-right: 1rem; }
+.dashboardConntent .dashboardBullet:last-child { margin-left: 1rem; }
 
 
-
-
-.dashboardPage .input,
-.dashboardPage .button {
+.dashboardConntent .input,
+.dashboardConntent .button {
   width: 100%;
   padding: 1rem;
   margin-top: 1rem;
@@ -44,10 +42,10 @@
   transition: 0.5s;
 }
 
-.dashboardPage .input::placeholder { color: var(--text-secondary); }
-.dashboardPage .button { cursor: pointer; }
-.dashboardPage .button:disabled { cursor: not-allowed; }
-.dashboardPage .button:hover { background-color: var(--bullet-background-accent); }
+.dashboardConntent .input::placeholder { color: var(--text-secondary); }
+.dashboardConntent .button { cursor: pointer; }
+.dashboardConntent .button:disabled { cursor: not-allowed; }
+.dashboardConntent .button:hover { background-color: var(--bullet-background-accent); }
 
 
 .errorMessage {
@@ -73,12 +71,12 @@
 }
 
 @media (max-width: 1024px) {
-  .dashboardPage {
+  .dashboardConntent {
     grid-template-columns: repeat(1, 1fr);
 
     padding: 1rem 1rem;
   }
 
-  .dashboardPage .dashboardBullet:first { margin: 1rem 0; }
-  .dashboardPage .dashboardBullet:last-child { margin: 1rem 0; }
+  .dashboardConntent .dashboardBullet:first { margin: 1rem 0; }
+  .dashboardConntent .dashboardBullet:last-child { margin: 1rem 0; }
 }
