@@ -2,8 +2,13 @@
   "name": "portfolio",
   "version": "1.0.0",
   "author": "Liel Amar",
-  "license": "Copyright (C) LielAmar, All Rights Reserved\nUnauthorized copying of this file, via any medium is strictly prohibited\nProprietary and confidential\nWritten by Liel Amar <liel@lielamar.com>, May 2021",
-  "private": false,
+  "license": "UNLICENSED",
+  "homepage": "https://lielamar.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LielAmar/Portfolio"
+  },
+  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
