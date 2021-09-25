@@ -1,5 +1,5 @@
 import { getApps, initializeApp, FirebaseApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import { getAnalytics, isSupported } from "firebase/analytics";
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -15,7 +15,8 @@ let app: FirebaseApp;
 
 if(!getApps().length) {
   app = initializeApp(firebaseConfig);
-  getAnalytics();
+  
+  isSupported().then(result => result && getAnalytics());
 } else
   app = getApps()[0];1
 
