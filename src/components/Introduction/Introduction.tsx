@@ -19,6 +19,7 @@ import styles from "./Introduction.module.css";
 
 const words = [
   "Fullstack Developer",
+  "Studying B.S. in CS",
   "Mobile Developer",
   "Video Editor",
   "Graphic Designer",
