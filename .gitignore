@@ -7,7 +7,7 @@ node_modules/
 coverage/
 
 # backend
-# backend/
+backend/
 
 # next.js
 .next/
