@@ -1,4 +1,4 @@
-import SocialItem from "./Socials/SocialItem/SocialItem";
+import SocialItem from "./SocialItem/SocialItem";
 
 import { socialLinks } from "@config/global";
 

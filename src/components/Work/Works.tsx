@@ -7,7 +7,7 @@ import styles from "./Works.module.css";
  * 
  * This component contains the works displayed on the index (main) page of the website.
  * 
- * This component renders multiple #Work components with an icon, title, color and text describing each skill.
+ * This component renders multiple #Work components with an icon, title, color and text describing each trait.
  */
 
 interface props {}

@@ -2,7 +2,7 @@ import Head from "next/head";
 
 import Layout from "@components/Layout";
 import Introduction from "@components/Introduction/Introduction";
-import Skills from "@components/Skills/Skills";
+import Traits from "@components/Traits/Traits";
 import Works from "@components/Work/Works";
 import Navbar from "@components/Navbar/Navbar";
 import Footer from "@components/Footer/Footer";
@@ -36,7 +36,7 @@ const IndexPage = () => {
 
         <Introduction />
 
-        <Skills />
+        <Traits />
 
         <Works />
 
