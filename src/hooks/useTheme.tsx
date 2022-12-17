@@ -7,7 +7,7 @@ import { useCookies } from "react-cookie";
  * @used
  */
 const _useTheme = (): [string, (newTheme: string) => void] => {
-  const [cookies, setCookie, _removeCookie] = useCookies(["portfolio"]);
+  const [cookies, setCookie, _removeCookie] = useCookies(["portfolio", "theme"]);
   const [theme, setTheme] = useState("dark");
 
   // Sets the initial theme to the prefered theme - either the theme saved previously in a cookie or the systems  prefered theme
@@ -38,7 +38,7 @@ const _useTheme = (): [string, (newTheme: string) => void] => {
  *  * Since the theme cookie is an essential/necessary cookie, we don't need to import the useCookieConsent hook and check if we do have consent
  */
 const useTheme = (): [Theme, (newTheme: Theme) => void] => {
-  const [cookies, setCookie, _removeCookie] = useCookies(["portfolio"]);
+  const [cookies, setCookie, _removeCookie] = useCookies(["portfolio", "theme"]);
 
   const [theme, setTheme] = useState(Theme.dark);
 

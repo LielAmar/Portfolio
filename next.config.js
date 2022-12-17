@@ -25,19 +25,19 @@ module.exports = {
           {
             contentSecurityPolicy: {
               directives: {
-                defaultSrc: ["'unsafe-eval'", "'self'"],
+                defaultSrc: ["'self'"],
 
-                styleSrc: ["'unsafe-eval'", "'unsafe-inline'", ...stylesheetSources],
-                styleSrcElem: ["'unsafe-eval'", "'unsafe-inline'", ...stylesheetSourcesElements],
+                styleSrc: ["'unsafe-inline'", ...stylesheetSources],
+                styleSrcElem: ["'unsafe-inline'", ...stylesheetSourcesElements],
 
-                scriptSrc: ["'unsafe-eval'", "'unsafe-inline'", ...scriptSources],
-                scriptSrcElem: ["'unsafe-eval'", "'unsafe-inline'", ...scriptSourcesElements],
+                scriptSrc: ["'unsafe-inline'", ...scriptSources],
+                scriptSrcElem: ["'unsafe-inline'", ...scriptSourcesElements],
 
-                fontSrc: ["'unsafe-eval'", "'unsafe-inline'", ...fontSources],
-                imgSrc: ["'unsafe-eval'", "'unsafe-inline'", ...imageSources],
-                frameSrc: ["'unsafe-eval'", "'unsafe-inline'", ...frameSources],
+                fontSrc: ["'unsafe-inline'", ...fontSources],
+                imgSrc: ["'unsafe-inline'", ...imageSources],
+                frameSrc: ["'unsafe-inline'", ...frameSources],
 
-                connectSrc: ["'unsafe-eval'", "'unsafe-inline'", ...connectSources],
+                connectSrc: ["'unsafe-inline'", ...connectSources],
               },
             },
             forceHTTPSRedirect: [ true, { includeSubDomains: true }],
