@@ -38,7 +38,7 @@ const Header: React.FC<props> = ({ menuClick, pfpSource, pfpClick, withSearchBar
           </div>
         }
 
-        <Image src={ "/images/logo.webp" } loader={ () => pfpSource ? pfpSource : "/images/logo.webp" } width={ 40 } height={ 40 } onClick={ pfpClick }/>
+        <Image alt="logo" priority={true} src={ "/images/logo.webp" } loader={ () => pfpSource ? pfpSource : "/images/logo.webp" } width={ 40 } height={ 40 } onClick={ pfpClick }/>
       </div>
     </header>
   );

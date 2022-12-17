@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Typed from "react-typed";
+import { TypeAnimation } from 'react-type-animation';
 
 import { Theme, useThemeContext } from "@context/ThemeContext";
 
@@ -18,14 +18,16 @@ import styles from "./Introduction.module.css";
  */
 
 const words = [
-  "Fullstack Developer",
-  "B.S. in CS Student",
-  "Mobile Developer",
-  "Video Editor",
-  "Graphic Designer",
-  "UI/UX Designer",
-  "Youtuber",
-  "Freelancer"
+  "B.S. in CS Student", 2000,
+  "Java Expert", 2000,
+  "Fullstack Developer", 2000,
+  "C/C++ Developer", 2000,
+  "Python Developer", 2000,
+  "Mobile Developer", 2000,
+  "Video Editor", 2000,
+  "Graphic Designer", 2000,
+  "UI/UX Designer", 2000,
+  "Freelancer", 2000
 ];
 
 interface props {}
@@ -39,16 +41,25 @@ const Introduction: React.FC<props> = () => {
     <section id="me" className={ styles.intro }>
       <div className={ styles.introWrapper }>
         <div className={ styles.logoWrapper }>
-          <Image onClick={ toggleTheme }  id="logo" alt="Grayish-LA-Logo" src="/images/logo.webp" width={ 300 } height={ 300 }/>
+          <Image priority={true} onClick={ toggleTheme }  id="logo" alt="Grayish-LA-Logo" src="/images/logo.webp" width={ 300 } height={ 300 }/>
         </div>
 
         <div className={ styles.textWrapper }>
           <h2>Hey, I am <strong>Liel Amar</strong>.</h2>
 
-          <p>I am a <Typed strings={ words } typeSpeed={ 60 } backSpeed={ 60 } loop></Typed></p>
-          <p>with over <strong>7 years</strong> of experience.</p>
-        </div>
+          <div className={ styles.animationWrapper }>
+            <p>I am a </p>
 
+            <TypeAnimation 
+              sequence={words}
+              wrapper="span"
+              cursor={true}
+              repeat={Infinity}
+            />
+          </div>
+
+          <p>with over <strong>6 years</strong> of experience.</p>
+        </div>
       </div>
     </section>
   );

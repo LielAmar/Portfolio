@@ -47,3 +47,9 @@
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }
+
+@media (max-width: 500px) {
+  .works .worksWrapper > h2 {
+    text-align: center;
+  }
+}

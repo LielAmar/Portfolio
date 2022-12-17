@@ -1,6 +1,7 @@
 const { createSecureHeaders } = require("next-secure-headers");
 
-const defaultSources = ["http://localhost:3000", "https://www.lielamar.com", "https://dev.lielamar.com/"];
+const defaultSources = ["http://localhost:3000", "https://www.lielamar.com", "https://dev.lielamar.com/",
+"ws://localhost:3000", "ws://lielamar.com", "ws://www.lielamar.com", "wss://lielamar.com", "wss://www.lielamar.com"];
 
 const stylesheetSources = [...defaultSources, "https://platform.twitter.com"];
 const stylesheetSourcesElements = [...defaultSources, "https://fonts.googleapis.com", "https://platform.twitter.com"];
@@ -24,19 +25,19 @@ module.exports = {
           {
             contentSecurityPolicy: {
               directives: {
-                defaultSrc: "'self'",
+                defaultSrc: ["'unsafe-eval'", "'self'"],
 
-                styleSrc: ["'unsafe-inline'", ...stylesheetSources],
-                styleSrcElem: ["'unsafe-inline'", ...stylesheetSourcesElements],
+                styleSrc: ["'unsafe-eval'", "'unsafe-inline'", ...stylesheetSources],
+                styleSrcElem: ["'unsafe-eval'", "'unsafe-inline'", ...stylesheetSourcesElements],
 
-                scriptSrc: ["'unsafe-inline'", ...scriptSources],
-                scriptSrcElem: ["'unsafe-inline'", ...scriptSourcesElements],
+                scriptSrc: ["'unsafe-eval'", "'unsafe-inline'", ...scriptSources],
+                scriptSrcElem: ["'unsafe-eval'", "'unsafe-inline'", ...scriptSourcesElements],
 
-                fontSrc: ["'unsafe-inline'", ...fontSources],
-                imgSrc: ["'unsafe-inline'", ...imageSources],
-                frameSrc: ["'unsafe-inline'", ...frameSources],
+                fontSrc: ["'unsafe-eval'", "'unsafe-inline'", ...fontSources],
+                imgSrc: ["'unsafe-eval'", "'unsafe-inline'", ...imageSources],
+                frameSrc: ["'unsafe-eval'", "'unsafe-inline'", ...frameSources],
 
-                connectSrc: ["'unsafe-inline'", ...connectSources],
+                connectSrc: ["'unsafe-eval'", "'unsafe-inline'", ...connectSources],
               },
             },
             forceHTTPSRedirect: [ true, { includeSubDomains: true }],

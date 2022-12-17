@@ -18,7 +18,7 @@ const NavbarMenu: React.FC<props> = () => {
           
       <NavbarItem name="Who am I?" href="#me" />
       <NavbarItem name="Skills" href="#skills" />
-      <NavbarItem name="Work" href="#work" />
+      <NavbarItem name="Experience" href="#work" />
       <NavbarItem name="Contact" href="#contact" />
 
     </div>

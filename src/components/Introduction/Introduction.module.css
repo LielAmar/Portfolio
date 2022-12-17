@@ -47,6 +47,15 @@
   margin: 0 0 0 2rem;
 
   color: var(--text);
+
+  font-size: 1.25rem;
+  font-weight: 300;
+  word-spacing: 2px
+}
+
+.introWrapper .textWrapper strong,
+.introWrapper .textWrapper span {
+  font-weight: 600;
 }
 
 .introWrapper .textWrapper h2 {
@@ -54,23 +63,11 @@
   font-weight: 300;
 }
 
-.introWrapper .textWrapper h2 strong {
-  font-weight: 600;
-}
-
-.introWrapper .textWrapper p {
-  font-size: 1.25rem;
-  font-weight: 300;
-  word-spacing: 2px;
-}
-
-.introWrapper .textWrapper p:first-of-type {
+.introWrapper .textWrapper .animationWrapper {
   margin-top: 2rem;
-}
-
-.introWrapper .textWrapper p strong,
-.introWrapper .textWrapper p span {
-  font-weight: 600;
+  display: flex;
+  justify-content: left;
+  gap: 8px;
 }
 
 @keyframes logo-float {
@@ -103,6 +100,10 @@
     margin: 2rem 0 0 0;
   }
 
+  .introWrapper .textWrapper .animationWrapper {
+    justify-content: center;
+  }
+
   .introWrapper .textWrapper h2,
   .introWrapper .textWrapper p {
     text-align: center;
@@ -110,11 +111,11 @@
 }
 
 @media (max-width: 500px) {
-  .introWrapper .textWrapper h2 {
-    font-size: 1.75rem;
+  .introWrapper .textWrapper {
+    font-size: 1rem;
   }
 
-  .introWrapper .textWrapper p {
-    font-size: 1rem;
+  .introWrapper .textWrapper h2 {
+    font-size: 1.75rem;
   }
 }
