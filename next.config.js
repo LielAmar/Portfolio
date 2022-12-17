@@ -14,7 +14,7 @@ const imageSources = [...defaultSources, "data:", "https://platform.twitter.com"
 const frameSources = [...defaultSources, "https://platform.twitter.com", "https://cdn.syndication.twimg.com",
   "https://syndication.twitter.com", "https://discordapp.com", "https://discord.com", "https://portfolio-25fd0.firebaseapp.com/"];
 
-const connectSources = [...defaultSources, "https://www.googleapis.com", "https://us-central1-portfolio-25fd0.cloudfunctions.net/", "https://securetoken.googleapis.com", "https://firebase.googleapis.com/", "https://firebaseinstallations.googleapis.com", "https://identitytoolkit.googleapis.com", "https://www.google-analytics.com"];
+const connectSources = [...defaultSources, "https://vitals.vercel-insights.com/v1/vitals", "https://www.googleapis.com", "https://us-central1-portfolio-25fd0.cloudfunctions.net/", "https://securetoken.googleapis.com", "https://firebase.googleapis.com/", "https://firebaseinstallations.googleapis.com", "https://identitytoolkit.googleapis.com", "https://www.google-analytics.com"];
 
 module.exports = {
   async headers() {
