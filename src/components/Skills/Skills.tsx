@@ -22,7 +22,7 @@ const Skills: React.FC<props> = () => {
         <div className={ styles.skillsContainer }>
           <Skill src={ "/svgs/student.svg" } title="Student" primaryColor={ "#FF6E72" } >
             <p>
-              I am a <strong>CS</strong> student at The <strong>Hebrew University of Jerusalem</strong>.
+              I am a <strong>Computer Science</strong> student at The <strong>Hebrew University of Jerusalem</strong>.
               <br></br>
               <br></br>
               I have maintained a <strong>GPA</strong> of <strong>90+</strong> and excelled in all <strong>Computer Science</strong> courses.
@@ -34,7 +34,7 @@ const Skills: React.FC<props> = () => {
               I am highly skilled in <strong>Java</strong>, <strong>Python</strong>, <strong>C</strong> and <strong>TypeScript</strong>.
               <br></br>
               <br></br>
-              I am experienced with <strong>C++</strong>, <strong>C#</strong> and various <strong>Frameworks</strong> such as <strong>React</strong> and <strong>Spring Boot</strong>.
+              I am experienced in <strong>C++</strong>, <strong>C#</strong> and various <strong>Frameworks</strong> such as <strong>React</strong> and <strong>Spring Boot</strong>.
             </p>
           </Skill>
 
