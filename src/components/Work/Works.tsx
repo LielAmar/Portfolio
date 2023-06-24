@@ -22,9 +22,17 @@ const Works: React.FC<props> = () => {
         <div className={ styles.worksContainer }>
           <Work src="/images/oversight.webp" alt="Oversight" iconHref="https://oversight.co.il/" title="Oversight" titleHref="https://oversight.co.il/" role="Fullstack Developer Intern">
             <p>
-              I started working at <strong>Oversight</strong> as a Fullstack Developer Intern after finishing my first year of college.
+              I started working at <strong>Oversight</strong> as a Fullstack Developer Intern after finishing my first year of university.
               <br></br>
-              I was assigned to work on an Israeli <strong>B2B Startup Company</strong>, doing Frontend and Backend development.
+              I was assigned to work on a <strong>B2B Startup Company</strong>, doing Frontend and Backend development.
+            </p>
+          </Work>
+
+          <Work src="/images/hypixel.webp" alt="Hypixel" iconHref="https://hypixel.net/members/lielamar.175428/" title="Hypixel Network" titleHref="https://hypixel.net/" role="Volunteer Staff Member">
+            <p>
+              <strong>Hypixel</strong> is the largest Minecraft Network with over 20 million players. I have volunteered there for two years, from <strong>2019</strong> to <strong>2021</strong>.
+              <br></br>
+              I mainly focused on player assistance, training of new staff members, bug reports, and tests of new feautes and updates.
             </p>
           </Work>
 
@@ -33,14 +41,6 @@ const Works: React.FC<props> = () => {
               In the <strong>IDF</strong>, I served as a developer, and later on helped found <strong>Unit 88</strong>.
               <br></br>
               I was working on several software and applications used by over 2,000 soldiers.
-            </p>
-          </Work>
-
-          <Work src="/images/hypixel.webp" alt="Hypixel" iconHref="https://hypixel.net/members/lielamar.175428/" title="Hypixel Network" titleHref="https://hypixel.net/" role="Staff Member">
-            <p>
-              <strong>Hypixel</strong> is the largest Minecraft Network with over 20 million players. I have volunteered there for two years, from <strong>2019</strong> to <strong>2021</strong>.
-              <br></br>
-              I mainly focused on player assistance, training of new staff members, bug reports, and tests of new feautes and updates.
             </p>
           </Work>
 
@@ -53,6 +53,11 @@ const Works: React.FC<props> = () => {
           </Work>
 
 
+          <Work src="/images/voluntime.webp" alt="VolunTime" iconHref="https://github.com/VolunTimeApp" title="VolunTime" titleHref="https://github.com/VolunTimeApp" role="Lead Developer">
+            <p>
+              <strong>VolunTime</strong> is an Android app developed during <strong>HUJI's 2023 Hackathon</strong>. It helps users to find <strong>Volunteering Opportunities</strong> and <strong>Simulate & Rates</strong> users' performances using Generative AI.
+            </p>
+          </Work>
 
           <Work src="/images/languagefix.webp" alt="Language Fix Plugin" iconHref="https://github.com/LielAmar/LanguageFix" title="Language Fix" titleHref="https://bit.ly/3hMGZ3I" role="Developer">
             <p>
@@ -76,13 +81,12 @@ const Works: React.FC<props> = () => {
             </p>
           </Work>
 
+
           <Work src="/images/armsrace.webp" alt="Arms Race Plugin" iconHref="https://bit.ly/3oPl9hB" title="Arms Race" titleHref="https://bit.ly/3oPl9hB" role="Developer">
             <p>
               <strong>ArmsRace</strong> is a one of its kind Minecraft Minigame. It features Combat and Shop Systems, Cosmetics, Skills, Perks, Pickups, Unlimited Maps, Unlimited Tiers and more.
             </p>
           </Work>
-
-
 
           <Work src="/images/lielscore.webp" alt="Liel's Core Lib" iconHref="https://github.com/LielAmar/LielsCore" title="Liel's Core" titleHref="https://github.com/LielAmar/LielsCore" role="Developer">
             <p>
