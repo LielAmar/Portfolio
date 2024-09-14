@@ -1,0 +1,13 @@
+[project]
+authors = ["Liel Amar <liel@lielamar.com>"]
+channels = ["conda-forge"]
+description = "Add a short description here"
+name = "Portfolio"
+platforms = ["win-64"]
+version = "0.1.0"
+
+[tasks]
+dev = "npm run dev -- -H 192.168.1.151"
+
+[dependencies]
+nodejs = ">=22.8.0,<23"
