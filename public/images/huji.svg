@@ -1,14 +1,143 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="53.3" height="95.625" viewBox="0 0 53.3 95.625">
-  <g id="HUJI_Hebrew_University_of_Jerusalem" data-name="HUJI Hebrew University of Jerusalem" transform="translate(-22.919 -50)">
-    <path id="Path_3" data-name="Path 3" d="M121.219,117.425l-.9-5.7h-1.1l-1.1,3.3c-.1.4-.2.7-.3,1.1h0l-.3-1.2-1.1-3.3h-1.1l-.9,5.7h1l.4-2.9a7.568,7.568,0,0,0,.1-1.5h0a4.951,4.951,0,0,0,.4,1.3l1,3.1h.9l1.1-3.3c.1-.4.2-.7.3-1.1h0c.1.4.1.8.2,1.4l.4,3Zm-7.7,0v-.8h-2.1v-1.8h2v-.8h-2v-1.6h2.1v-.8h-3v5.7h3Zm-3.7,0v-.8h-2v-4.9h-.9v5.7h2.9Zm-5.3-2h-1.8l.6-1.8.3-.9h0l.3.9Zm1.7,2-2.1-5.7h-1l-.67,1.91-1.33,3.79h.9l.4-1.2h2.3l.4,1.2Zm-5.5-1.7c0-1.8-2.5-1.3-2.5-2.5,0-.5.4-.8,1.1-.8a3.553,3.553,0,0,1,1,.2l.1-.8a3.4,3.4,0,0,0-1-.1c-1.3,0-2.1.7-2.1,1.7,0,1.8,2.5,1.3,2.5,2.5,0,.6-.5.9-1.1.9a5.019,5.019,0,0,1-1.2-.2l-.1.9a4.485,4.485,0,0,0,1.1.1c1.4-.1,2.2-.9,2.2-1.9m-4.5-.5v-3.5h-.9v3.6c0,1.1-.4,1.4-1.4,1.4a1.158,1.158,0,0,1-1.3-1.3v-3.7h-.9v3.8c0,1,.4,2,2.2,2a1.951,1.951,0,0,0,2.3-1.6c0-.3,0-.5,0-.7m-6.6-1.9c0,.6-.4,1-1.2,1h-.4v-1.8h.5c.7,0,1.1.3,1.1.8m1.3,4.2-1.5-2-.5-.6a1.58,1.58,0,0,0,1.6-1.6c0-1.1-.8-1.5-2-1.5h-1.5v5.7h.9v-2.5h0l1.8,2.5Zm-5.1,0v-.8h-2.1v-1.8h2v-.8h-2v-1.6h2.1v-.8h-3v5.7h3Zm-4.4-1.6v-4.2h-.9v4.1c0,.7-.2.9-.7.9a1.268,1.268,0,0,1-.6-.1v.8c.2,0,.4.1.7.1,1.1,0,1.5-.7,1.5-1.6m-4.3-3.4v-.8h-3v5.7h.9v-2.5h1.9v-.8h-1.9v-1.7Zm-4.9,2.1c0,1.4-.8,2.1-1.7,2.1-1.1,0-1.6-.9-1.6-2.2a1.871,1.871,0,0,1,1.7-2.1c1,0,1.6.8,1.6,2.2m1-.1c0-1.9-1-2.9-2.6-2.9a2.689,2.689,0,0,0-2.7,2.7v.3c0,1.8.8,2.9,2.6,2.9a2.689,2.689,0,0,0,2.7-2.7v-.3m37.5-11.124h-1l-.8,1.7a11.723,11.723,0,0,0-.5,1.1h0a6.9,6.9,0,0,0-.4-1l-.9-1.8h-1l1.8,3.7v2h.9v-2Zm-4.7.8v-.8h-4v.8h1.6v4.9h.9v-4.9Zm-4.8-.8h-.9v5.7h.9Zm-2,4c0-1.8-2.5-1.3-2.5-2.5,0-.5.4-.8,1.1-.8a3.553,3.553,0,0,1,1,.2l.1-.8a3.4,3.4,0,0,0-1-.1c-1.3,0-2.1.7-2.1,1.7,0,1.8,2.5,1.3,2.5,2.5,0,.6-.5.9-1.1.9a5.019,5.019,0,0,1-1.2-.2v.9a4.484,4.484,0,0,0,1.1.1c1.3-.1,2.1-.8,2.1-1.9m-5.3-2.3c0,.6-.4,1-1.2,1h-.4v-1.8h.5c.7,0,1.1.2,1.1.8m1.4,4.1-1.5-2-.5-.6a1.58,1.58,0,0,0,1.6-1.6c0-1.1-.8-1.5-2-1.5h-1.5v5.7h.9v-2.5h0l1.8,2.5Zm-5.1,0v-.8h-2.1v-1.7h2v-.8h-2v-1.6h2.1v-.8h-3v5.7h3Zm-3.7-5.6h-1l-1.2,3.4c-.1.4-.3.8-.4,1.2h0a5.638,5.638,0,0,0-.4-1.2l-1.2-3.5h-1l2,5.7h1Zm-5.8,0h-.9v5.7h.9Zm-2.4,5.6v-5.7h-.9v1.7a22.622,22.622,0,0,0,.1,2.7,8.264,8.264,0,0,0-.7-1.3l-1.9-3.1h-1.2v5.7h.9v-1.9a18.521,18.521,0,0,0-.1-2.5l.6,1.2,1.9,3.2h1.3Zm-6-2.2v-3.5h-.9v3.6c0,1.1-.4,1.4-1.3,1.4a1.206,1.206,0,0,1-1.3-1.3v-3.7h-.9v3.8c0,1,.4,2,2.2,2a1.951,1.951,0,0,0,2.3-1.6,1.952,1.952,0,0,1-.1-.7M115.8,94.8h-.9l-.9,3.6c-.1.3-.1.6-.2,1h0c-.1-.3-.1-.7-.2-1l-1-3.5h-1l-1,3.5a4.253,4.253,0,0,0-.2,1.1h0a3.6,3.6,0,0,0-.2-1.1l-.9-3.4h-1l1.5,5.7h1.1l1-3.5a3.553,3.553,0,0,0,.2-1h0c.1.4.1.7.2,1.1l1,3.5h1.1Zm-8.2,5.7v-.8h-2.1V98h2v-.8h-2V95.6h2.1v-.8h-3v5.7h3Zm-5.2-4.1c0,.6-.4,1-1.2,1h-.4V95.6h.5c.7,0,1.1.3,1.1.8m1.3,4.2-1.5-2-.5-.6a1.58,1.58,0,0,0,1.6-1.6c0-1.1-.8-1.5-2-1.5H99.8v5.7h.9V98h0l1.8,2.5Zm-6-1.7c0,.6-.4,1-1.2,1h-.7V98.1h.5c.8,0,1.4.2,1.4.8m-.1-2.4c0,.6-.4.9-1.3.9h-.5v-2h.7c.8,0,1.1.3,1.1.8m1.1,2.5a1.384,1.384,0,0,0-1.1-1.3h0a1.381,1.381,0,0,0,1-1.3c0-.9-.6-1.4-1.9-1.4H94.9v5.7h1.6c1.7,0,2.2-1,2.2-1.7m-5,1.7v-.8H91.6V97.8h2V97h-2V95.4h2.1v-.8h-3v5.7h3Zm-4.5,0V94.7h-.9V97H85.6V94.7h-.9v5.7h.9V97.8h2.7v2.6Zm-7.5,0v-.8H79.6V97.8h2V97h-2V95.4h2.1v-.8h-3v5.7h3Zm-4.5,0V94.7h-.9V97H73.6V94.7h-.9v5.7h.9V97.8h2.7v2.6ZM72,95.5v-.8H68v.8h1.6v4.9h.9V95.5Z" transform="translate(-45 28)"/>
-    <path id="Path_4" data-name="Path 4" d="M50.5,97.8l4.1,6.1,2.8-3.5-3.5-7Z" fill="#215969"/>
-    <path id="Path_5" data-name="Path 5" d="M31,99.1l-8,9.8v7.2l7.4-7.3Z" fill="#686d4a"/>
-    <path id="Path_6" data-name="Path 6" d="M37.9,90.5l.4,10.6L47,92.6l-4.9-7.4Z" fill="#249076"/>
-    <path id="Path_7" data-name="Path 7" d="M46.9,79.2l-4.8,6L47,92.6l4.4-4.3Z" fill="#7a000a"/>
-    <path id="Path_8" data-name="Path 8" d="M59,86.9l-2-4-5.6,5.4,2.5,5.1Z" fill="#458ea1"/>
-    <path id="Path_9" data-name="Path 9" d="M50.5,97.8l3.4-4.4-2.5-5.1L47,92.6Z" fill="#170a0d"/>
-    <path id="Path_10" data-name="Path 10" d="M36.6,64.1H33.1L31,99.1l6.9-8.6Z" fill="#5fb279"/>
-    <path id="Path_11" data-name="Path 11" d="M31,99.1l-.6,9.7,7.9-7.7-.4-10.6Z" fill="#09362c"/>
-    <path id="Path_12" data-name="Path 12" d="M35.9,53l-1.5-3s-3.1,4.8-3.1,6.6a9.578,9.578,0,0,0,1.4,4.9H37l.8-4.6H35Z" fill="#7a000a"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="31.07789mm"
+   height="57.072159mm"
+   viewBox="0 0 110.11851 202.22419"
+   id="svg3684"
+   version="1.1"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="Hebrew University Logo.svg">
+  <defs
+     id="defs3686" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="425.04025"
+     inkscape:cy="-73.611318"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3689">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-321.36931,-421.25012)">
+    <g
+       id="g6955"
+       transform="matrix(4.0740123,0,0,-4.0740123,-692.1981,2895.5416)">
+      <g
+         transform="translate(269.4633,571.4332)"
+         id="g4634">
+        <path
+           inkscape:connector-curvature="0"
+           id="path4636"
+           style="fill:#2f7789;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           d="M 0,0 3.088,-4.633 5.156,-1.974 2.56,3.297 Z" />
+      </g>
+      <g
+         transform="translate(254.7725,570.4657)"
+         id="g4638">
+        <path
+           inkscape:connector-curvature="0"
+           id="path4640"
+           style="fill:#797c58;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           d="m 0,0 -5.984,-7.36 v -5.408 l 5.526,5.434 z" />
+      </g>
+      <g
+         transform="translate(259.9753,576.9196)"
+         id="g4642">
+        <path
+           inkscape:connector-curvature="0"
+           id="path4644"
+           style="fill:#26a594;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           d="M 0,0 0.33,-7.947 6.88,-1.566 3.194,3.965 Z" />
+      </g>
+      <g
+         transform="translate(266.7808,585.3624)"
+         id="g4646">
+        <path
+           inkscape:connector-curvature="0"
+           id="path4648"
+           style="fill:#83111f;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           d="m 0,0 -3.612,-4.477 3.687,-5.531 3.287,3.201 z" />
+      </g>
+      <g
+         transform="translate(275.818,579.6082)"
+         id="g4650">
+        <path
+           inkscape:connector-curvature="0"
+           id="path4652"
+           style="fill:#489cbc;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           d="m 0,0 -1.489,3.027 -4.186,-4.08 1.88,-3.825 z" />
+      </g>
+      <g
+         transform="translate(269.4633,571.4332)"
+         id="g4654">
+        <path
+           inkscape:connector-curvature="0"
+           id="path4656"
+           style="fill:#261417;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           d="M 0,0 2.56,3.297 0.679,7.122 -2.608,3.92 Z" />
+      </g>
+      <path
+         transform="translate(259.0115,596.7738)"
+         inkscape:connector-curvature="0"
+         id="path4660"
+         style="fill:#60bd8d;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         d="m 0,0 h -2.627 l -1.612,-26.308 5.203,6.454 z" />
+      <g
+         transform="translate(254.7725,570.4657)"
+         id="g4662">
+        <path
+           inkscape:connector-curvature="0"
+           id="path4664"
+           style="fill:#0b4843;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           d="m 0,0 -0.458,-7.334 5.991,5.841 -0.33,7.947 z" />
+      </g>
+      <g
+         transform="translate(258.5118,605.0873)"
+         id="g4666">
+        <path
+           inkscape:connector-curvature="0"
+           id="path4668"
+           style="fill:#83111f;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           d="m 0,0 -1.091,2.248 c 0,0 -2.331,-3.566 -2.331,-4.951 0,-2.199 1.033,-3.649 1.033,-3.649 h 3.2 l 0.566,3.451 h -2.054 z" />
+      </g>
+    </g>
   </g>
 </svg>

@@ -8,31 +8,11 @@ import GitHubIcon from '@/app/icons/github';
 import LinkedInIcon from '@/app/icons/linkedin';
 import SpigotIcon from '@/app/icons/spigot';
 import AboutLink from './about_link';
+import { iAmA } from '@/app/content';
 
 const aboutHeight = 'h-[45rem] sm:h-[41rem] md:h-[30rem]';
 
-const iAmA = [
-    'M.Sc. in CS Student',
-    3000,
-    'ML Developer',
-    2000,
-    'Python Developer',
-    2000,
-    'Java Developer',
-    2000,
-    'Fullstack Developer',
-    2000,
-    'C/C++ Developer',
-    2000,
-    'Mobile Developer',
-    2000,
-    'AI Enthusiast',
-    2000,
-    'Video Editor',
-    2000,
-];
-
-const About = ({ id }: { id: string }) => {
+const About = () => {
     return (
         <>
             <div className={`w-full ${aboutHeight} absolute z-0`}>
@@ -40,7 +20,6 @@ const About = ({ id }: { id: string }) => {
             </div>
 
             <div
-                id={id}
                 className={`w-full ${aboutHeight} flex flex-col items-center gap-10 z-10 pt-[8rem]`}
             >
                 <div className="w-fit h-fit flex flex-col md:flex-row items-center align-center justify-center gap-10">
@@ -54,11 +33,11 @@ const About = ({ id }: { id: string }) => {
                     />
 
                     <div className="w-fit h-fit flex flex-col items-left text-left gap-10">
-                        <h1 className="w-max text-3xl md:text-4xl font-light">
+                        <h1 className="w-max text-3xl text-text-primary-light md:text-4xl font-light">
                             Hey, I am{' '}
                             <span className="font-bold">Liel Amar</span>!
                         </h1>
-                        <h2 className="w-max text-xl md:text-2xl font-light">
+                        <h2 className="w-max text-xl text-text-primary-light md:text-2xl font-light">
                             I am a{' '}
                             <span className="font-bold">
                                 <TypeAnimation
@@ -78,24 +57,24 @@ const About = ({ id }: { id: string }) => {
                     <AboutLink
                         name="GitHub"
                         url="https://github.com/LielAmar"
-                        background="bg-githubBackground"
-                        text="text-githubText"
+                        background="bg-github-background"
+                        text="text-github-text"
                         icon={<GitHubIcon />}
                     />
 
                     <AboutLink
                         name="LinkedIn"
                         url="https://linkedin.com/in/liel-amar/"
-                        background="bg-linkedinBackground"
-                        text="text-linkedinText"
+                        background="bg-linkedin-background"
+                        text="text-linkedin-text"
                         icon={<LinkedInIcon />}
                     />
 
                     <AboutLink
                         name="Spigot"
                         url="https://spigotmc.org/members/lielamar.446937/"
-                        background="bg-spigotBackground"
-                        text="text-spigotText"
+                        background="bg-spigot-background"
+                        text="text-spigot-text"
                         icon={<SpigotIcon />}
                     />
                 </div>

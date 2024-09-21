@@ -1,4 +1,3 @@
-import { link } from 'fs';
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
@@ -21,8 +20,14 @@ const config: Config = {
             animation: {
                 float: 'float 4s ease-in-out infinite',
             },
+            opacity: {
+                'primary': '1.0',
+                'semi': '0.8',
+            },
             colors: {
                 background: '#16161a',
+
+                primary: '#42a7f5',
 
                 darkText: '#1A1A1A',
                 lightText: '#f2f2f2',
@@ -31,16 +36,24 @@ const config: Config = {
                 navbarTextActive: '#1A1A1A',
                 navbarTextInactive: '#747474',
 
-                separatorBackground: 'rgba(229, 229, 229, 0.5)',
-                timelineBackground: 'rgba(229, 229, 229, 0.5)',
+                separatorBackground: 'rgba(229, 229, 229, 0.8)',
+                timelineBackground: 'rgba(229, 229, 229, 0.8)',
                 timelineBoxBackground: 'rgba(229, 229, 229, 0.8)',
 
-                githubBackground: '#FFFFFF',
-                githubText: '#000000',
-                linkedinBackground: '#0077B5',
-                linkedinText: '#FFFFFF',
-                spigotBackground: '#FFDB3D',
-                spigotText: '#000000',
+                'github-background': '#FFFFFF',
+                'github-text': '#000000',
+                'linkedin-background': '#0077B5',
+                'linkedin-text': '#FFFFFF',
+                'spigot-background': '#FFDB3D',
+                'spigot-text': '#000000',
+
+                'element-primary': '#e5e5e5',
+
+                'text-primary-light': '#e3e3e3',
+                'text-secondary-light': '#cccccc',
+                'text-primary-dark': '#1f1f1f',
+                'text-secondary-dark': '#4a4a4a',
+
             },
         },
     },

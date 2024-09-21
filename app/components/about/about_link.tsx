@@ -1,4 +1,5 @@
-import Link from "next/link";
+import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const AboutLink = ({
     name,
@@ -14,14 +15,16 @@ const AboutLink = ({
     icon: any;
 }) => {
     return (
-        <Link
-            href={url}
-            className={`w-fit h-fit px-4 py-2 flex flex-row justify-center gap-2 ${background} ${text} font-light rounded-full transform duration-500 hover:-translate-y-1`}
-        >
-            {name}
+        <motion.div whileHover={{ scale: 1.1 }}>
+            <Link
+                href={url}
+                className={`w-fit h-fit px-4 py-2 flex flex-row justify-center gap-2 ${background} ${text} font-normal rounded-full`}
+            >
+                {name}
 
-            <div className={`w-[20px] ${text}`}>{icon}</div>
-        </Link>
+                <div className={`w-[20px] ${text}`}>{icon}</div>
+            </Link>
+        </motion.div>
     );
 };
 

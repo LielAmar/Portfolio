@@ -13,7 +13,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html lang="en" className="dark" style={{ colorScheme: 'dark' }}>
             <head>
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link
@@ -26,7 +26,7 @@ export default function RootLayout({
                     rel="stylesheet"
                 />
             </head>
-            <body className="antialiased bg-background text-lightText font-rubik">
+            <body className="antialiased bg-background font-rubik">
                 {children}
             </body>
         </html>

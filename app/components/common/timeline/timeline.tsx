@@ -12,6 +12,7 @@ import PlaneIcon from '@/app/icons/plane';
 import VolunteerIcon from '@/app/icons/volunteer';
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 export type TimelineItem = {
     title: string;
@@ -32,10 +33,10 @@ const Timeline = ({
 }) => {
     return (
         <div className="w-full h-full flex flex-col items-center gap-10">
-            <h1 className="text-4xl font-medium text-lightText">{title}</h1>
+            <h1 className="text-4xl font-normal text-text-primary-light">{title}</h1>
 
             <VerticalTimeline
-                lineColor="rgba(229, 229, 229, 0.5)"
+                lineColor="rgba(229, 229, 229, 0.8)"  // Same as 'element-primary' in tailwind.config.js
                 animate={true}
             >
                 {timelineItems.map((item, index) => (
@@ -43,20 +44,23 @@ const Timeline = ({
                         key={index}
                         visible={true}
                         contentStyle={{
-                            background: 'rgba(229, 229, 229, 0.8)',
+                            background: 'transparent',
                             borderRadius: '1rem',
                             color: '#1A1A1A',
                             boxShadow: '0 0 0 0',
+                            border: '2px solid rgba(229, 229, 229, 0.8)'
                         }}
                         contentArrowStyle={{
-                            borderRight: '7px solid rgba(229, 229, 229, 0.8)',
+                            borderRight: '6px solid rgba(229, 229, 229, 0.8)',
+                            marginRight: '2px', // To align the arrow with the border (right side)
+                            marginLeft: '2px' // To align the arrow with the border (left side)
                         }}
                         date={item.date}
-                        dateClassName="text-md !font-light text-darkText min-[1170px]:text-lightText !opacity-100"
+                        dateClassName="text-base !font-normal text-text-primary-light !opacity-100"
                         iconStyle={{
                             background: 'rgba(229, 229, 229, 1)',
                             color: '#1A1A1A',
-                            boxShadow: '0 0 0 0',
+                            boxShadow: '0 0 0 0'
                         }}
                         icon={
                             item.type === 'education' ? (
@@ -94,11 +98,11 @@ const Timeline = ({
                                     ))}
 
                                 <div className="flex flex-col">
-                                    <h3 className="text-lg text-darkText font-semibold">
+                                    <h3 className="text-lg text-text-primary-light font-semibold">
                                         {item.title}
                                     </h3>
 
-                                    <h4 className="text-md text-darkText font-thin">
+                                    <h4 className="text-base text-text-secondary-light font-normal">
                                         {item.subtitle}
                                     </h4>
                                 </div>
@@ -118,7 +122,7 @@ const Timeline = ({
                                                 .map((line, index) => (
                                                     <span
                                                         key={index}
-                                                        className="text-md text-darkText font-regular"
+                                                        className="text-base text-text-secondary-light font-regular"
                                                     >
                                                         {line}
                                                     </span>

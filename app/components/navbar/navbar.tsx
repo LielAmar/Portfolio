@@ -40,8 +40,10 @@ const NavBar = () => {
         return () => window.removeEventListener('scroll', handleScroll, false);
     }, []);
 
-    const handleOptionClick = (option: string) => {
+    const handleOptionClick = (option: string, href: string) => {
         setActiveOption(option);
+
+        document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
 
         isProgrammaticScroll.current.push(true);
 
@@ -58,24 +60,28 @@ const NavBar = () => {
             <nav
                 className={`
                     w-full md:w-fit grid grid-cols-3 grid-rows-2 sm:flex justify-center text-center 
-                    items-center bg-navbarBackground bg-opacity-80 md:rounded-full px-5 md:px-4 py-3 md:py-2`}
+                    items-center bg-element-primary bg-opacity-semi md:rounded-full px-5 md:px-3 py-3 md:py-2`}
             >
                 {navItems.map((item) => (
                     <Link
                         key={item.name}
                         href={item.href}
-                        className={`relative px-3 py-2 text-sm font-normal ${
+                        className={`relative px-3 py-2 text-sm font-semibold ${
                             item.name == activeOption
-                                ? 'text-navbarTextActive'
-                                : 'text-navbarTextInactive'
+                                ? 'text-text-primary-dark'
+                                : 'text-text-secondary-dark'
                         } rounded-full transition-colors duration-200`}
-                        onClick={() => handleOptionClick(item.name)}
+                        scroll={false}
+                        onClick={(event) => {
+                            // event.preventDefault();
+                            handleOptionClick(item.name, item.href);
+                        }}
                     >
                         {item.name}
 
                         {item.name == activeOption && (
                             <motion.div
-                                className="absolute inset-0 bg-navbarBackground rounded-full -z-10"
+                                className="absolute inset-0 bg-element-primary bg-opacity-primary rounded-full -z-10"
                                 layoutId="activeBackground"
                                 transition={{
                                     type: 'spring',
