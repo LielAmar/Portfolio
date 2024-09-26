@@ -36,7 +36,7 @@ const NavbarOption = ({
         opacity: 1,
       });
     }
-  }, [activeNavbarItem, navbarItem.name]);
+  }, [activeNavbarItem, navbarItem.name, setPosition]);
 
   return (
     <Link

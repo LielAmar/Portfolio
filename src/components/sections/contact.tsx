@@ -20,7 +20,7 @@ const Contact = () => {
           <u>
             <a href="mailto: liel@lielamar.com">liel@lielamar.com</a>
           </u>
-          . Alternatively, send me a message on any platform I'm active on!
+          . Alternatively, send me a message on any platform I&apos;m active on!
         </h3>
 
         <div className="w-full justify-center flex flex-row gap-4 text-secondary stroke-1">
