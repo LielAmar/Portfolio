@@ -9,6 +9,7 @@ import { educationItems } from "@content/education";
 import { navbarItems } from "@content/navbar";
 import { experienceItems } from "@content/experience";
 import Contact from "@components/sections/contact";
+import Footer from "@components/structure/footer/footer";
 
 export default function Home() {
   return (
@@ -37,6 +38,8 @@ export default function Home() {
             <Contact />
           </section>
         </div>
+
+        <Footer />
       </div>
     </div>
   );

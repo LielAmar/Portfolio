@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "bring-them-home-now-react": "^0.0.1",
     "framer-motion": "^11.7.0",
     "lucide-react": "^0.446.0",
     "next": "14.2.13",
