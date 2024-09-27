@@ -13,9 +13,20 @@ export const metadata: Metadata = {
   description: "Designed and developed by Liel Amar. Used Adobe XD, NextJS and Tailwind CSS.",
 
   openGraph: {
+    siteName: "Liel Amar's Portfolio",
     title: "Liel Amar's Portfolio",
     description: "Designed and developed by Liel Amar. Used Adobe XD, NextJS and Tailwind CSS.",
+    
+    type: "website",
+    locale: "en_US",
+    url: "https://lielamar.com",
   },
+
+  twitter: {
+    card: "summary",
+    site: "@iamlielamar",
+    creator: "@iamlielamar",
+  }
 };
 
 export default function RootLayout({
