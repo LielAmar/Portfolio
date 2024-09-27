@@ -69,7 +69,7 @@ const PasswordGenerator = () => {
 
   useEffect(() => {
     setPassword(generatePassword());
-  }, [passwordOptions, generatePassword]);
+  }, [passwordOptions]);
 
   const setUppercase = (value: boolean) => {
     if (!value && !passwordOptions.lowercase && !passwordOptions.numbers && !passwordOptions.symbols) return;
