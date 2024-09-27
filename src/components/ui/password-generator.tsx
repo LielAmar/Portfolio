@@ -17,6 +17,7 @@ const Checkbox = ({ value, setValue }: { value: boolean; setValue: (value: boole
       <input
         type="checkbox"
         checked={value}
+        onChange={() => {}}
         className="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-green-300 checked:border-green-300"
       />
       <span className="absolute text-gray-700 opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">

@@ -51,7 +51,7 @@ const Experience = ({ experienceItems }: { experienceItems: ExperienceItem[] }) 
                     {item.techStack.map((tech, index) => (
                       <div key={index} className="flex flex-row items-center px-2 gap-2 rounded-full border-tech-icon border-2">
                         <h4 className="text-tech-icon text-sm font-thin">{tech.name}</h4>
-                        {/* <tech.icon size={14} /> */}
+                        {tech.icon && <tech.icon size={14} />}
                       </div>
                     ))}
                   </div>
