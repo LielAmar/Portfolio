@@ -11,9 +11,9 @@ type PasswordOptions = {
   symbols: boolean;
 };
 
-const Checkbox = ({ value, setValue }: { value: any; setValue: any }) => {
+const Checkbox = ({ value, setValue }: { value: boolean; setValue: (value: boolean) => void }) => {
   return (
-    <div className="relative inline-flex items-center cursor-pointer" onClick={(_) => setValue(!value)}>
+    <div className="relative inline-flex items-center cursor-pointer" onClick={() => setValue(!value)}>
       <input
         type="checkbox"
         checked={value}
@@ -45,10 +45,6 @@ const PasswordGenerator = () => {
 
   const [password, setPassword] = useState<string>("");
 
-  useEffect(() => {
-    setPassword(generatePassword());
-  }, [passwordOptions]);
-
   const generatePassword = (): string => {
     setCopied(false);
 
@@ -70,6 +66,10 @@ const PasswordGenerator = () => {
 
     return password;
   };
+
+  useEffect(() => {
+    setPassword(generatePassword());
+  }, [passwordOptions, generatePassword]);
 
   const setUppercase = (value: boolean) => {
     if (!value && !passwordOptions.lowercase && !passwordOptions.numbers && !passwordOptions.symbols) return;
@@ -136,39 +136,15 @@ const PasswordGenerator = () => {
           <div className="w-full flex flex-col md:flex-row items-center justify-center gap-4">
             <h3 className="text-secondary text-base font-normal">Uppercase</h3>
             <Checkbox value={passwordOptions.uppercase} setValue={setUppercase} />
-            {/* <input
-              type="checkbox"
-              checked={passwordOptions.uppercase}
-              className="h-5 w-5"
-              onChange={(event) => setPasswordOptions({ ...passwordOptions, uppercase: event.target.checked })}
-            /> */}
 
             <h3 className="text-secondary text-base font-normal">Lowercase</h3>
             <Checkbox value={passwordOptions.lowercase} setValue={setLowercase} />
-            {/* <input
-              type="checkbox"
-              checked={passwordOptions.lowercase}
-              className="h-5 w-5"
-              onChange={(event) => setPasswordOptions({ ...passwordOptions, lowercase: event.target.checked })}
-            /> */}
 
             <h3 className="text-secondary text-base font-normal">Numbers</h3>
             <Checkbox value={passwordOptions.numbers} setValue={setNumbers} />
-            {/* <input
-              type="checkbox"
-              checked={passwordOptions.numbers}
-              className="h-5 w-5"
-              onChange={(event) => setPasswordOptions({ ...passwordOptions, numbers: event.target.checked })}
-            /> */}
 
             <h3 className="text-secondary text-base font-normal">Symbols</h3>
             <Checkbox value={passwordOptions.symbols} setValue={setSymbols} />
-            {/* <input
-              type="checkbox"
-              checked={passwordOptions.symbols}
-              className="h-5 w-5"
-              onChange={(event) => setPasswordOptions({ ...passwordOptions, symbols: event.target.checked })}
-            /> */}
           </div>
         </div>
       </div>
