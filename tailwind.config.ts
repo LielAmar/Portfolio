@@ -70,17 +70,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [
-    function ({ addComponents }: { addComponents: any }) {
-      addComponents({
-        ".content": {
-          marginInline: "auto",
-          width: "100%",
-          maxWidth: "70ch",
-        },
-      });
-    },
-  ],
+  plugins: [],
 };
 
 export default config;

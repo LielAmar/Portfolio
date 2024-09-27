@@ -18,7 +18,7 @@ export default function Home() {
     <div>
       <NavBar navbarItems={navbarItems} />
 
-      <div className="content">
+      <div className="ms-auto me-auto w-full max-w-[70ch]">
         <div className="py-16 space-y-16 md:px-0 px-16">
           <section id="introduction">
             <Introduction />
