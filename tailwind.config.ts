@@ -2,6 +2,28 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: ["./src/pages/**/*.{js,ts,jsx,tsx,mdx}", "./src/components/**/*.{js,ts,jsx,tsx,mdx}", "./src/app/**/*.{js,ts,jsx,tsx,mdx}"],
+  safelist: [
+    "bg-frogger",
+    "bg-2fa",
+    "bg-voluntime",
+    "bg-languagefix",
+    "bg-partygames",
+    "hover:bg-frogger",
+    "hover:bg-2fa",
+    "hover:bg-voluntime",
+    "hover:bg-languagefix",
+    "hover:bg-partygames",
+    "group-hover:bg-frogger",
+    "group-hover:bg-2fa",
+    "group-hover:bg-voluntime",
+    "group-hover:bg-languagefix",
+    "group-hover:bg-partygames",
+    "border-frogger",
+    "border-2fa",
+    "border-voluntime",
+    "border-languagefix",
+    "border-partygames",
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -37,6 +59,14 @@ const config: Config = {
         twitter: "#1DA1F2",
         linkedin: "#0a66c2",
         spigotmc: "#FFDB3D",
+
+        "tech-icon": "#bbf7d0",
+
+        frogger: "#D9FFB7",
+        "2fa": "#FFF8B7",
+        voluntime: "#FFB7F5",
+        languagefix: "#B7D8FF",
+        partygames: "#FFB7B7",
       },
     },
   },

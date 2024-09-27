@@ -14,7 +14,7 @@ const Introduction = () => {
   return (
     <>
       <div className="relative space-y-4">
-        <div className="flex flex-row justify-center items-center gap-16">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-16">
           <Image src="/images/webp/me2.webp" alt="Me (Liel Amar)" width={200} height={200} className="rounded-full animate-float" />
 
           <div className="flex flex-col gap-8">

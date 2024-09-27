@@ -1,6 +1,21 @@
+import DockerIcon from "@icons/tech/docker";
+import ExpressJSIcon from "@icons/tech/expressjs";
+import FastAPIIcon from "@icons/tech/fastapi";
+import FirebaseIcon from "@icons/tech/firebase";
+import GoogleCloudIcon from "@icons/tech/googlecloud";
+import JavaIcon from "@icons/tech/java";
+import JavaScriptIcon from "@icons/tech/javascript";
+import MongoDBIcon from "@icons/tech/mongodb";
+import PostgreSQLIcon from "@icons/tech/postgresql";
+import PythonIcon from "@icons/tech/python";
+import ReactIcon from "@icons/tech/react";
+import SpringIcon from "@icons/tech/spring";
+import TypeScriptIcon from "@icons/tech/typescript";
+import React from "react";
+
 export type TechStackItem = {
   name: string;
-  icon?: string; // TODO: remove ?
+  icon: React.FC<{ className?: string; size?: number; strokeWidth?: number }>;
 };
 
 export type ExperienceItem = {
@@ -45,27 +60,31 @@ export const experienceItems: ExperienceItem[] = [
     techStack: [
       {
         name: "Python",
+        icon: PythonIcon,
       },
       {
         name: "JavaScript",
+        icon: JavaScriptIcon,
       },
       {
         name: "Google Cloud",
+        icon: GoogleCloudIcon,
       },
       {
         name: "FastAPI",
-      },
-      {
-        name: "SciKit-Learn",
+        icon: FastAPIIcon,
       },
       {
         name: "React",
+        icon: ReactIcon,
       },
       {
         name: "PostgreSQL",
+        icon: PostgreSQLIcon,
       },
       {
         name: "Docker",
+        icon: DockerIcon,
       },
     ],
   },
@@ -88,21 +107,27 @@ export const experienceItems: ExperienceItem[] = [
     techStack: [
       {
         name: "TypeScript",
+        icon: TypeScriptIcon,
       },
       {
         name: "Firebase",
+        icon: FirebaseIcon,
       },
       {
         name: "ExpressJS",
+        icon: ExpressJSIcon,
       },
       {
         name: "React",
+        icon: ReactIcon,
       },
       {
         name: "MongoDB",
+        icon: MongoDBIcon,
       },
       {
         name: "Docker",
+        icon: DockerIcon,
       },
     ],
   },
@@ -125,18 +150,23 @@ export const experienceItems: ExperienceItem[] = [
     techStack: [
       {
         name: "Java",
+        icon: JavaIcon,
       },
       {
         name: "TypeScript",
+        icon: TypeScriptIcon,
       },
       {
         name: "Spring",
+        icon: SpringIcon,
       },
       {
         name: "React",
+        icon: ReactIcon,
       },
       {
         name: "MongoDB",
+        icon: MongoDBIcon,
       },
     ],
   },

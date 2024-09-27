@@ -87,8 +87,8 @@ const NavBar = ({ navbarItems }: { navbarItems: NavbarItem[] }) => {
   };
 
   return (
-    <header className="w-full sm:w-fit h-full pt-10 gap-x-3 m-auto relative" role="navigation">
-      <div className="w-full h-full min-h-10 hidden sm:flex justify-center relative">
+    <header className="w-full md:w-fit h-full pt-10 gap-x-3 m-auto relative" role="navigation">
+      <div className="w-full h-full min-h-10 hidden md:flex justify-center relative">
         {navbarItems.map((navbarItem, index) => (
           <NavbarOption
             key={index}
@@ -104,14 +104,14 @@ const NavBar = ({ navbarItems }: { navbarItems: NavbarItem[] }) => {
         <Cursor position={position} />
       </div>
 
-      <div className="w-full h-full min-h-10 px-10 sm:hidden flex flex-row justify-between items-center gap-3 relative">
+      <div className="w-full h-full min-h-10 px-10 md:hidden flex flex-row justify-between items-center gap-3 relative">
         <h1 className="text-primary text-3xl font-medium">Liel Amar</h1>
         <Menu color="white" onClick={() => setIsMenuOpen(!isMenuOpen)} size={30} />
 
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
-              className={`w-[100vw] h-full sm:hidden left-0 flex flex-col items-center absolute z-10`}
+              className={`w-[100vw] h-full md:hidden left-0 flex flex-col items-center absolute z-10`}
               initial={{ top: 45, opacity: 0 }}
               animate={{ top: 63, opacity: 1 }}
               exit={{ top: 45, opacity: 0 }}

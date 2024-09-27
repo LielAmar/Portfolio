@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col gap-2 text-secondary text-base font-normal py-8">
+    <div className="flex flex-col gap-2 text-secondary text-base font-normal">
       <h3>
         Loosely designed in{" "}
         <Link href="https://helpx.adobe.com/support/xd.html">

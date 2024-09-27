@@ -10,6 +10,8 @@ import { navbarItems } from "@content/navbar";
 import { experienceItems } from "@content/experience";
 import Contact from "@components/sections/contact";
 import Footer from "@components/structure/footer/footer";
+import Projects from "@components/sections/projects";
+import { projectsItems } from "@content/projects";
 
 export default function Home() {
   return (
@@ -17,7 +19,7 @@ export default function Home() {
       <NavBar navbarItems={navbarItems} />
 
       <div className="content">
-        <div className="py-16 space-y-16">
+        <div className="py-16 space-y-16 md:px-0 px-16">
           <section id="introduction">
             <Introduction />
           </section>
@@ -34,12 +36,18 @@ export default function Home() {
             <Experience experienceItems={experienceItems} />
           </section>
 
+          <section id="projects">
+            <Projects projectsItems={projectsItems} />
+          </section>
+
           <section id="contact">
             <Contact />
           </section>
         </div>
 
-        <Footer />
+        <div className="py-8 md:px-0 px-16">
+          <Footer />
+        </div>
       </div>
     </div>
   );

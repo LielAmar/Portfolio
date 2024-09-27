@@ -1,7 +1,8 @@
-import SectionTitle from "@components/ui/section-title";
-import { ExperienceItem } from "@content/experience";
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
+
+import SectionTitle from "@components/ui/section-title";
+import { ExperienceItem } from "@content/experience";
 
 const Experience = ({ experienceItems }: { experienceItems: ExperienceItem[] }) => {
   return (
@@ -14,11 +15,13 @@ const Experience = ({ experienceItems }: { experienceItems: ExperienceItem[] }) 
           const end = typeof item.end === "string" ? item.end : `${item.end.month.substring(0, 3)} ${item.end.year}`;
 
           return (
-            <div key={index} className="w-full grid grid-cols-4 gap-y-8 gap-x-4">
-              <div className="col-span-1 text-secondary text-base font-normal">{`${start} - ${end}`}</div>
+            <div key={index} className="w-full flex flex-col md:grid grid-cols-4 md:gap-y-8 gap-x-4">
+              <div className="h-7 flex flex-col justify-center">
+                <div className="col-span-1 text-secondary text-base font-normal">{`${start} - ${end}`}</div>
+              </div>
 
-              <div className="col-span-3 flex flex-col gap-4">
-                <div className="flex flex-col leading-6">
+              <div className="col-span-3 flex flex-col gap-4 mb-4 md:mb-0">
+                <div className="flex flex-col">
                   <h2 className="text-primary text-lg font-semibold">{item.title}</h2>
                   <div className="flex flex-row items-center gap-2 text-secondary text-base font-normal">
                     <h3>{item.organization}</h3>
@@ -31,16 +34,28 @@ const Experience = ({ experienceItems }: { experienceItems: ExperienceItem[] }) 
                   </div>
                 </div>
 
-                {item.description && <h3 className="text-secondary text-base font-normal leading-6">{item.description}</h3>}
+                {item.description && <h3 className="text-secondary text-base font-normal">{item.description}</h3>}
 
-                <div className="flex flex-col">
-                  {item.additional &&
-                    item.additional.map((additional, index) => (
-                      <h3 key={index} className="text-secondary text-base font-normal leading-6">
+                {item.additional && (
+                  <div className="flex flex-col">
+                    {item.additional.map((additional, index) => (
+                      <h3 key={index} className="text-secondary text-base font-normal">
                         {additional}
                       </h3>
                     ))}
-                </div>
+                  </div>
+                )}
+
+                {item.techStack && (
+                  <div className="flex flex-row flex-wrap gap-x-2 gap-y-1">
+                    {item.techStack.map((tech, index) => (
+                      <div key={index} className="flex flex-row items-center px-2 gap-2 rounded-full border-tech-icon border-2">
+                        <h4 className="text-tech-icon text-sm font-thin">{tech.name}</h4>
+                        {/* <tech.icon size={14} /> */}
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           );
