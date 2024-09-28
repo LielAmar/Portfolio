@@ -9,6 +9,7 @@ import TwitterIcon from "@icons/twitter";
 import GitHubIcon from "@icons/github";
 import { introductionItems } from "@content/introduction";
 import { TypeAnimation } from "react-type-animation";
+import { FileUserIcon } from "lucide-react";
 
 const Introduction = () => {
   return (
@@ -35,6 +36,11 @@ const Introduction = () => {
             </div>
 
             <div className="flex flex-row gap-4 text-secondary stroke-1">
+              <Link href="./cv.pdf" target="_blank" rel="noopener noreferrer" title="My CV" passHref>
+                <FileUserIcon className="cursor-pointer hover:text-teal-500 transition-color duration-200" strokeWidth={1.5} />
+              </Link>
+
+
               <Link href="https://github.com/lielamar" target="_blank" rel="noopener noreferrer" title="My GitHub Profile" passHref>
                 <GitHubIcon className="cursor-pointer hover:text-github transition-color duration-200" strokeWidth={1.5} />
               </Link>
