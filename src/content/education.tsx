@@ -63,19 +63,19 @@ export const educationItems: EducationItem[] = [
     description: "Participated in the Student Exchange Program.",
   },
 
-  {
-    title: "High School",
-    schoolName: "ORT College, Jerusalem",
-    start: {
-      month: "September",
-      year: "2016",
-    },
-    end: {
-      month: "June",
-      year: "2019",
-    },
-    logo: "/images/svg/ort.svg",
-    redirectUrl: "https://givatram.ort.org.il/",
-    additional: ["• Computer Science and Physics electives", "• Finished with honors with a grade of 115.2"],
-  },
+  // {
+  //   title: "High School",
+  //   schoolName: "ORT College, Jerusalem",
+  //   start: {
+  //     month: "September",
+  //     year: "2016",
+  //   },
+  //   end: {
+  //     month: "June",
+  //     year: "2019",
+  //   },
+  //   logo: "/images/svg/ort.svg",
+  //   redirectUrl: "https://givatram.ort.org.il/",
+  //   additional: ["• Computer Science and Physics electives", "• Finished with honors with a grade of 115.2"],
+  // },
 ];
