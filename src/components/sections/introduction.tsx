@@ -7,8 +7,6 @@ import SpigotMCIcon from "@icons/spigotmc";
 import LinkedInIcon from "@icons/linkedin";
 import TwitterIcon from "@icons/twitter";
 import GitHubIcon from "@icons/github";
-import { introductionItems } from "@content/introduction";
-import { TypeAnimation } from "react-type-animation";
 import { FileUserIcon } from "lucide-react";
 
 const Introduction = () => {
@@ -26,12 +24,8 @@ const Introduction = () => {
 
               <div className="flex flex-col text-secondary text-lg leading-6">
                 <h2>
-                  I am a{" "}
-                  <strong className="font-semibold">
-                    <TypeAnimation sequence={introductionItems} wrapper="span" cursor={true} repeat={Infinity} />
-                  </strong>
+                  I am a Software Developer with multiple years of professional experience.
                 </h2>
-                <h2>with years of professional experience.</h2>
               </div>
             </div>
 
