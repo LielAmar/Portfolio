@@ -47,12 +47,18 @@ const Experience = ({ experienceItems }: { experienceItems: ExperienceItem[] }) 
                 )}
 
                 {item.techStack && (
-                  <div className="flex flex-row flex-wrap gap-x-2 gap-y-1">
+                  <div className="flex flex-row flex-wrap gap-x-2 gap-y-2">
                     {item.techStack.map((tech, index) => (
-                      <div key={index} className="flex flex-row items-center px-2 gap-2 rounded-full border-tech-icon border-2">
-                        <h4 className="text-tech-icon text-sm font-thin">{tech.name}</h4>
+                      <Link
+                        target="_blank"
+                        href={tech.url || "javascript:void(0);"}
+                        rel="noopener noreferrer"
+                        key={index}
+                        className="flex flex-row items-center px-2 gap-2 rounded-full border-secondary hover:border-tech-icon transition-colors duration-200 border-2 cursor-pointer"
+                      >
+                        <h4 className="text-secondary hover:text-tech-icon transition-colors duration-200 text-sm font-normal">{tech.name}</h4>
                         {tech.icon && <tech.icon size={14} />}
-                      </div>
+                      </Link>
                     ))}
                   </div>
                 )}

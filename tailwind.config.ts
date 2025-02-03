@@ -60,7 +60,7 @@ const config: Config = {
         linkedin: "#0a66c2",
         spigotmc: "#FFDB3D",
 
-        "tech-icon": "#bbf7d0",
+        "tech-icon": "#578cff",
 
         frogger: "#D9FFB7",
         "2fa": "#FFF8B7",

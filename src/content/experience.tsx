@@ -3,6 +3,7 @@ import React from "react";
 export type TechStackItem = {
   name: string;
   icon?: React.FC<{ className?: string; size?: number; strokeWidth?: number }>;
+  url?: string;
 };
 
 export type ExperienceItem = {
@@ -47,36 +48,45 @@ export const experienceItems: ExperienceItem[] = [
     techStack: [
       {
         name: "Python",
+        url: "https://www.python.org/",
         // icon: PythonIcon,
       },
       {
         name: "JavaScript",
+        url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
         // icon: JavaScriptIcon,
       },
       {
         name: "Google Cloud",
+        url: "https://cloud.google.com/",
         // icon: GoogleCloudIcon,
       },
       {
         name: "FastAPI",
+        url: "https://fastapi.tiangolo.com/",
         // icon: FastAPIIcon,
       },
       {
-        name: "SciKit-Learn"
+        name: "SciKit-Learn",
+        url: "https://scikit-learn.org/stable/",
       },
       {
         name: "React",
+        url: "https://reactjs.org/",
         // icon: ReactIcon,
       },
       {
         name: "PostgreSQL",
+        url: "https://www.postgresql.org/",
         // icon: PostgreSQLIcon,
       },
       {
-        name: "CI/CD"
+        name: "CI/CD",
+        url: "https://docs.gitlab.com/ee/ci/",
       },
       {
         name: "Docker",
+        url: "https://www.docker.com/",
         // icon: DockerIcon,
       },
     ],
@@ -100,26 +110,32 @@ export const experienceItems: ExperienceItem[] = [
     techStack: [
       {
         name: "TypeScript",
+        url: "https://www.typescriptlang.org/",
         // icon: TypeScriptIcon,
       },
       {
         name: "Firebase",
+        url: "https://firebase.google.com/",
         // icon: FirebaseIcon,
       },
       {
         name: "ExpressJS",
+        url: "https://expressjs.com/",
         // icon: ExpressJSIcon,
       },
       {
         name: "React",
+        url: "https://reactjs.org/",
         // icon: ReactIcon,
       },
       {
         name: "MongoDB",
+        url: "https://www.mongodb.com/",
         // icon: MongoDBIcon,
       },
       {
         name: "Docker",
+        url: "https://www.docker.com/",
         // icon: DockerIcon,
       },
     ],
@@ -143,22 +159,27 @@ export const experienceItems: ExperienceItem[] = [
     techStack: [
       {
         name: "Java",
+        url: "https://www.java.com/",
         // icon: JavaIcon,
       },
       {
         name: "TypeScript",
+        url: "https://www.typescriptlang.org/",
         // icon: TypeScriptIcon,
       },
       {
         name: "Spring",
+        url: "https://spring.io/",
         // icon: SpringIcon,
       },
       {
         name: "React",
+        url: "https://reactjs.org/",
         // icon: ReactIcon,
       },
       {
         name: "MongoDB",
+        url: "https://www.mongodb.com/",
         // icon: MongoDBIcon,
       },
     ],
