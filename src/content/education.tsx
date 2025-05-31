@@ -30,7 +30,7 @@ export const educationItems: EducationItem[] = [
     end: "Present",
     logo: "/images/svg/huji.svg",
     redirectUrl: "https://www.cs.huji.ac.il/",
-    description: "I am studying my Master's in Computer Science.",
+    description: "My research focuses on Weight Space Learning under the supervision of Prof. Yedid Hoshen.",
   },
   {
     title: "Bachelor's in Computer Science",

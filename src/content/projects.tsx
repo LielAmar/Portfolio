@@ -9,6 +9,14 @@ export type ProjectItem = {
 
 export const projectsItems: ProjectItem[] = [
   {
+    name: "Double You",
+    role: "Lead Developer",
+    description: "A self-hosted context-aware personalized AI assistance mobile application using Retrieval Augmented Generation. This project won HUJI's 2025 Hackathon.",
+    href: "https://github.com/doubleyou-w",
+    image: "/images/webp/doubleyou.webp",
+    backgroundColor: "doubleyou",
+  },
+  {
     name: "Defeating Frogger with AI",
     role: "Lead Developer",
     description: "Using Reinforcement Learning and Genetic Algorithms to create AI agents that beat the Frogger game.",
@@ -27,7 +35,7 @@ export const projectsItems: ProjectItem[] = [
   {
     name: "VolunTime",
     role: "Lead Developer",
-    description: "An android application used for finding volunteer opportunities using LLMs. It was developed as part of HUJI's 2023 CS Hackathon.",
+    description: "An android application used for finding volunteer opportunities using LLMs. It was developed as part of HUJI's 2023 Hackathon.",
     href: "https://github.com/VolunTimeApp",
     image: "/images/webp/voluntime.webp",
     backgroundColor: "voluntime",

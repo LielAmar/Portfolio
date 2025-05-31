@@ -21,6 +21,33 @@ const About = () => {
                     </span>
                   );
                 }
+
+                // replace [text](url) with <a> tag, in same color underlined
+                const urlMatch = part.match(/\[(.+?)\]\((.+?)\)/);
+
+                const textBeforeUrl = part.split(/\[(.+?)\]\((.+?)\)/)[0];
+                const textAfterUrl = part.split(/\[(.+?)\]\((.+?)\)/)[3];
+
+                if (urlMatch) {
+                  const [, text, url] = urlMatch;
+
+                  return (
+                    <>
+                      {textBeforeUrl && <span key={`before-${i}`}>{textBeforeUrl}</span>}
+                      <a
+                        key={i}
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-secondary hover:text-tech-icon underline transition-colors duration-200"
+                      >
+                        {text}
+                      </a>
+                      {textAfterUrl && <span key={`after-${i}`}>{textAfterUrl}</span>}
+                    </>
+                  );
+                }
+                
                 return part;
               })}
             </h3>

@@ -8,10 +8,15 @@ import Experience from "@components/sections/experience";
 import { educationItems } from "@content/education";
 import { navbarItems } from "@content/navbar";
 import { experienceItems } from "@content/experience";
+import { projectsItems } from "@content/projects";
+import { awardsItems } from "@content/awards";
+import { publicationsItems } from "@content/publications";
+
 import Contact from "@components/sections/contact";
 import Footer from "@components/structure/footer/footer";
 import Projects from "@components/sections/projects";
-import { projectsItems } from "@content/projects";
+import Awards from "@components/sections/awards";
+import Publications from "@components/sections/publications";
 
 export default function Home() {
   return (
@@ -38,6 +43,14 @@ export default function Home() {
 
           <section id="projects">
             <Projects projectsItems={projectsItems} />
+          </section>
+
+          <section id="awards">
+            <Awards awardsItems={awardsItems} />
+          </section>
+
+          <section id="publications">
+            <Publications publicationsItems={publicationsItems} />
           </section>
 
           <section id="contact">

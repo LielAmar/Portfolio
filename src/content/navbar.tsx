@@ -21,6 +21,14 @@ export const navbarItems: NavbarItem[] = [
     href: "#projects",
   },
   {
+    name: "Awards",
+    href: "#awards",
+  },
+  {
+    name: "Publications",
+    href: "#publications",
+  },
+  {
     name: "Contact",
     href: "#contact",
   },
