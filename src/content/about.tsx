@@ -14,9 +14,9 @@ const computeAge = (): number => {
 }
 
 export const present: string[] = [
-  `I am a ${computeAge()} years old from *Israel* who loves technology, math, coding, photography, video editing, football and bingeing movies and TV shows!`,
+  `I've been building my own and others' ideas since I was 13, and I'm passionate about *software design & architecture*. My expertise lies in bringing product visions to life, mostly through mobile and web apps.`,
 
-  "I mainly have experience in Algorithms & Machine Learning development, but I have also done full-stack development, including web and mobile applications.",
+  `Currently, I am pursuing my Master's degree in Computer Science, under the Supervision of [Prof. Yedid Hoshen](https://scholar.google.co.il/citations?user=6y1-qS4AAAAJ). My main focus is Weight Space Learning.`,
 
-  "Currently, I am pursuing my Master's degree in Computer Science, under the Supervision of [Prof. Yedid Hoshen](https://scholar.google.co.il/citations?user=6y1-qS4AAAAJ). My main focus is Weight Space Learning.",
+  `I am ${computeAge()} years old and I currently live in *Israel*. Offline, you might find me shooting videos, going to the cinema, watching my favorite teams play or traveling the world!`,
 ];

@@ -24,7 +24,7 @@ const Introduction = () => {
 
               <div className="flex flex-col text-secondary text-lg leading-6">
                 <h2>
-                  I am a Software Developer with over 3 years of professional experience.
+                  I am a Software Developer with 3 years of professional experience.
                 </h2>
               </div>
             </div>
