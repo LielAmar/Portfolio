@@ -45,7 +45,7 @@ export const educationItems: EducationItem[] = [
     },
     logo: "/images/svg/huji.svg",
     redirectUrl: "https://www.cs.huji.ac.il/",
-    additional: ["• Finished with honors with a grade of 92.8.", "• Was on the Dean's list for 2021/22 and 2022/23."],
+    additional: ["• Finished with honors with a grade of 93.", "• Was on the Dean's list for 2021/22 and 2022/23."],
   },
   {
     title: "Semester Abroad",
