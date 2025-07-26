@@ -15,7 +15,7 @@ const KedAIWidget = () => {
     kedaiWidget();
   }, []);
 
-  return <div id="kedai" lang="en"></div>;
+  return null;
 };
 
 export default KedAIWidget;
