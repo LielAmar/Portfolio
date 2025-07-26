@@ -5,6 +5,7 @@ import { Rubik } from "next/font/google";
 import BringThemHomeNowWidget from "@components/widgets/bthn";
 
 import "./globals.css";
+import KedAIWidget from "@components/widgets/kedai";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
     siteName: "Liel Amar's Portfolio",
     title: "Liel Amar's Portfolio",
     description: "Designed and developed by Liel Amar. Used Adobe XD, NextJS and Tailwind CSS.",
-    
+
     type: "website",
     locale: "en_US",
     url: "https://lielamar.com",
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
     card: "summary",
     site: "@iamlielamar",
     creator: "@iamlielamar",
-  }
+  },
 };
 
 export default function RootLayout({
@@ -39,6 +40,7 @@ export default function RootLayout({
       <body className={`${rubik.className} antialiased`}>
         <>
           <BringThemHomeNowWidget />
+          <KedAIWidget />
           {children}
         </>
       </body>
