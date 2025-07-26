@@ -1,10 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const KedAIWidget = () => {
-  const [loadedScript, setLoadedScript] = useState(false);
-
   const kedaiWidget = () => {
     const script = window.document.createElement("script");
     script.type = "text/javascript";
@@ -14,10 +12,7 @@ const KedAIWidget = () => {
   };
 
   useEffect(() => {
-    if (loadedScript) return;
-    console.log("Loading KedAI widget script...");
     kedaiWidget();
-    setLoadedScript(true);
   }, []);
 
   return <div id="kedai" lang="en"></div>;
