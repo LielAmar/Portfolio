@@ -21,47 +21,47 @@ export type EducationItem = {
 
 export const educationItems: EducationItem[] = [
   {
-    title: "Master's in Computer Science",
-    schoolName: "The Hebrew University of Jerusalem",
+    title: "PhD in Chemistry",
+    schoolName: "Stanford University",
     start: {
-      month: "October",
-      year: "2024",
+      month: "July",
+      year: "2027",
     },
     end: "Present",
     logo: "/images/svg/huji.svg",
     redirectUrl: "https://www.cs.huji.ac.il/",
-    description: "My research focuses on Weight Space Learning under the supervision of Prof. Yedid Hoshen.",
+    description: "Researching chemistry at Stanford University.",
   },
-  {
-    title: "Bachelor's in Computer Science",
-    schoolName: "The Hebrew University of Jerusalem",
-    start: {
-      month: "October",
-      year: "2021",
-    },
-    end: {
-      month: "June",
-      year: "2024",
-    },
-    logo: "/images/svg/huji.svg",
-    redirectUrl: "https://www.cs.huji.ac.il/",
-    additional: ["• Finished with honors with a grade of 93.", "• Was on the Dean's list for 2021/22 and 2022/23."],
-  },
-  {
-    title: "Semester Abroad",
-    schoolName: "University of Florida",
-    start: {
-      month: "August",
-      year: "2023",
-    },
-    end: {
-      month: "December",
-      year: "2023",
-    },
-    logo: "/images/svg/uf.svg",
-    redirectUrl: "https://www.ufl.edu/",
-    description: "Participated in the Student Exchange Program.",
-  },
+  // {
+  //   title: "Bachelor's in Computer Science",
+  //   schoolName: "The Hebrew University of Jerusalem",
+  //   start: {
+  //     month: "October",
+  //     year: "2021",
+  //   },
+  //   end: {
+  //     month: "June",
+  //     year: "2024",
+  //   },
+  //   logo: "/images/svg/huji.svg",
+  //   redirectUrl: "https://www.cs.huji.ac.il/",
+  //   additional: ["• Finished with honors with a grade of 93.", "• Was on the Dean's list for 2021/22 and 2022/23."],
+  // },
+  // {
+  //   title: "Semester Abroad",
+  //   schoolName: "University of Florida",
+  //   start: {
+  //     month: "August",
+  //     year: "2023",
+  //   },
+  //   end: {
+  //     month: "December",
+  //     year: "2023",
+  //   },
+  //   logo: "/images/svg/uf.svg",
+  //   redirectUrl: "https://www.ufl.edu/",
+  //   description: "Participated in the Student Exchange Program.",
+  // },
 
   // {
   //   title: "High School",
