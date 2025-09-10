@@ -14,7 +14,7 @@ const Introduction = () => {
     <>
       <div className="relative space-y-4">
         <div className="flex flex-col md:flex-row justify-center items-center gap-16">
-          <Image src="/images/webp/me2.webp" alt="Me (Liel Amar)" width={200} height={200} className="rounded-full animate-float" />
+          <Image src="/images/webp/me2.webp" alt="Me (Liel Amar)" width={200} height={200} className="rounded-full animate-float" priority />
 
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-4">
@@ -23,17 +23,14 @@ const Introduction = () => {
               </h1>
 
               <div className="flex flex-col text-secondary text-lg leading-6">
-                <h2>
-                  I am a Software Developer with 3 years of professional experience.
-                </h2>
+                <h2>I am a Software Developer with 3 years of professional experience.</h2>
               </div>
             </div>
 
             <div className="flex flex-row gap-4 text-secondary stroke-1">
-              <Link href="./cv.pdf" target="_blank" rel="noopener noreferrer" title="My CV" passHref>
+              <a href="./cv.pdf" target="_blank" rel="noopener noreferrer" title="My CV">
                 <FileUserIcon className="cursor-pointer hover:text-teal-500 transition-color duration-200" strokeWidth={1.5} />
-              </Link>
-
+              </a>
 
               <Link href="https://github.com/lielamar" target="_blank" rel="noopener noreferrer" title="My GitHub Profile" passHref>
                 <GitHubIcon className="cursor-pointer hover:text-github transition-color duration-200" strokeWidth={1.5} />

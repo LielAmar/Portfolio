@@ -21,7 +21,7 @@ const Projects = ({ projectsItems }: { projectsItems: ProjectItem[] }) => {
 
                 {/* Content container */}
                 <div className="relative w-full h-full px-8 py-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-                  <Image src={item.image} alt={item.name} width={100} height={100} />
+                  <Image src={item.image} alt={item.name} width={100} height={100} style={{ width: "auto", height: "auto" }} />
                 </div>
 
                 {/* Overlay on hover */}

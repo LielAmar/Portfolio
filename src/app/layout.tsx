@@ -37,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark" style={{ colorScheme: "dark" }}>
-      <body className={`${rubik.className} antialiased`}>
+      <body className={`${rubik.className} antialiased`} suppressHydrationWarning={true}>
         <>
           <BringThemHomeNowWidget />
           <KedAIWidget />
