@@ -13,6 +13,8 @@ const KedAIWidget = () => {
   };
 
   useEffect(() => {
+    if (document.getElementById("kedai-script")) return;
+
     kedaiWidget();
   }, []);
 
