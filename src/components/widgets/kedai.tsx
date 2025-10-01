@@ -7,7 +7,7 @@ const KedAIWidget = () => {
     const script = window.document.createElement("script");
     script.type = "text/javascript";
     script.src = "https://cdn.kedai.co.il/kedai-widget.js";
-    script.setAttribute("agent-id", "xCDyLOzxSmrTzNMBBqsq");
+    script.setAttribute("agent-id", "BsbH9rIUnlC7iORH9N3M");
     script.setAttribute("language", "en");
     window.document.getElementsByTagName("head")[0].appendChild(script);
   };
